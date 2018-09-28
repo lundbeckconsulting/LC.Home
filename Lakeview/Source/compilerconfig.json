@@ -1,0 +1,26 @@
+﻿[
+  {
+    "outputFile": "wwwroot/CSS/layout.css",
+    "inputFile": "SASS/Layout.scss"
+  },
+  {
+    "outputFile": "wwwroot/CSS/index.css",
+    "inputFile": "SASS/Index.scss"
+  },
+  {
+    "outputFile": "wwwroot/CSS/about.css",
+    "inputFile": "SASS/About.scss"
+  },
+  {
+    "outputFile": "wwwroot/CSS/cv.css",
+    "inputFile": "SASS/CV.scss"
+  },
+  {
+    "outputFile": "wwwroot/CSS/project.css",
+    "inputFile": "SASS/Project.scss"
+  },
+  {
+    "outputFile": "wwwroot/CSS/projectitem.css",
+    "inputFile": "SASS/ProjectItem.scss"
+  }
+]

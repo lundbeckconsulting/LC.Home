@@ -1,0 +1,24 @@
+﻿@import "Variables.scss";
+
+div.content-wrap {
+    background-color: $contentBgColor;
+
+    & > div.header-wrap {
+        display: flex;
+
+        & > h2 {
+            flex: 0 0 130px;
+        }
+
+        & > div.pdf-wrap {
+            flex: 1 1 auto;
+
+            & > a.pdf-link {
+                width: 138px;
+                float: right;
+                position: relative;
+                top: 14px;
+            }
+        }
+    }
+}

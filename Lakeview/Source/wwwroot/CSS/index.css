@@ -1,0 +1,73 @@
+﻿/*
+    MAP / LIST
+*/
+/*
+    CONSTANTS
+*/
+div.content {
+  margin-top: 88px; }
+  div.content > div.top-bar {
+    background-color: #6b5b48;
+    padding: 8px; }
+    div.content > div.top-bar > div.name-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      div.content > div.top-bar > div.name-wrap > img.logo {
+        width: 48px;
+        margin-right: 6px; }
+    div.content > div.top-bar > div.slogan-wrap {
+      text-align: center;
+      font-size: 1.2em;
+      color: #cd832f;
+      position: relative;
+      top: -10px;
+      opacity: 0.8; }
+    div.content > div.top-bar > div.sub-wrap {
+      text-align: center;
+      font-size: 1.8em; }
+  div.content > div.button-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px; }
+    div.content > div.button-wrap > form {
+      display: block;
+      margin-left: 14px;
+      margin-right: 14px; }
+  div.content > div.info-wrap {
+    background-color: #b88853;
+    padding: 16px;
+    margin-top: 48px; }
+    div.content > div.info-wrap div.text-wrap {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      top: 0px; }
+      div.content > div.info-wrap div.text-wrap > div.inner > div.icon-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        padding: 22px;
+        margin-top: 46px;
+        width: 100%; }
+        div.content > div.info-wrap div.text-wrap > div.inner > div.icon-wrap > img {
+          max-width: 122px;
+          max-height: 122px;
+          margin-left: 6px;
+          margin-right: 6px; }
+
+@media (min-width: 768px) {
+  div.content {
+    margin-top: 144px; }
+    div.content > div.info-wrap div.text-wrap {
+      top: 52px; }
+      div.content > div.info-wrap div.text-wrap > div.inner > div.icon-wrap {
+        flex-direction: row;
+        flex-wrap: nowrap; }
+        div.content > div.info-wrap div.text-wrap > div.inner > div.icon-wrap > img {
+          max-width: 62px;
+          max-height: 62px; } }
+

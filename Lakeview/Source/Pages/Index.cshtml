@@ -1,0 +1,66 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Velkommen til muligheter | Design / Tech / Online";
+}
+
+@section CSS {
+    <lc:include src="index.css" />
+}
+
+<div class="content">
+    <div class="top-bar">
+        <div class="name-wrap">
+            <img src="/IMAGES/logo.png" class="logo" alt="logo" /> <span class="company-name">Lundbeck Consulting</span>
+        </div>
+        <div class="slogan-wrap">
+            <span class="label">- velkommen til muligheter -</span>
+        </div>
+        <div class="sub-wrap color-warning">
+            Teknologi | Online | Trender
+        </div>
+    </div>
+    <div class="button-wrap">
+        <form asp-page="About">
+            <input type="submit" class="btn-primary" value="Om Meg" />
+        </form>
+        <form asp-page="Project">
+            <input type="submit" class="btn-primary" value="Prosjekter" />
+        </form>
+    </div>
+    <div class="info-wrap">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="text-wrap">
+                    <div class="inner">
+                        <div>
+                            <h5 class="h-5">
+                                Jeg lager moderne nettsteder basert på prototyping som er tilpasset dagens krav til responsivt design.
+                                <br />
+                                <br />
+                                Med over 18 års erfaring er jeg trygg på alle jobber og garanterer et resultat du blir fornøyd med.
+                            </h5>
+                            <ul>
+                                <li>God grafisk design</li>
+                                <li>Brukervennlig grensesnitt</li>
+                                <li>Solid skalerbar kode</li>
+                                <li>Ryddig prosess</li>
+                            </ul>
+                        </div>
+                        <div class="icon-wrap">
+                            <img src="/IMAGES/TechIcons/logo-vs.png" class="r" alt="Visual Studio logo" title="Visual Studio" />
+                            <img src="/IMAGES/TechIcons/logo-csharp.png" class="r" alt="csharp logo" title="C#" />
+                            <img src="/IMAGES/TechIcons/logo-html.png" class="r" alt="HTML logo" title="HTML" />
+                            <img src="/IMAGES/TechIcons/logo-css.png" class="r" alt="CSS logo" title="CSS" />
+                            <img src="/IMAGES/TechIcons/logo-javascript.png" class="r" alt="javascript logo" title="JavaScript" />
+                            <img src="/IMAGES/TechIcons/adobe-xd-logo.png" class="r" alt="Adobe XD logo" title="Adobe XD" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="/IMAGES/tech-illu.png" class="r" />
+            </div>
+        </div>
+    </div>
+</div>

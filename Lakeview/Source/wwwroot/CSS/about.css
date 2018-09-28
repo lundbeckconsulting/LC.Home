@@ -1,0 +1,21 @@
+﻿div.content-wrap {
+  background-color: #b88853; }
+  div.content-wrap div.cv-wrap {
+    text-align: center;
+    padding: 22px; }
+    div.content-wrap div.cv-wrap > a.cv-link {
+      text-decoration: none; }
+      div.content-wrap div.cv-wrap > a.cv-link:hover {
+        text-decoration: underline; }
+  div.content-wrap div.contact-wrap {
+    display: flex;
+    justify-content: center;
+    padding-top: 58px; }
+    div.content-wrap div.contact-wrap > a {
+      display: block;
+      margin-left: 10px;
+      margin-right: 10px;
+      text-decoration: none; }
+  div.content-wrap img.rocket-illu {
+    max-width: 488px; }
+

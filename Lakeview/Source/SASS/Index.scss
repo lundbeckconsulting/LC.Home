@@ -1,0 +1,106 @@
+﻿@import "Creator/Creator.Mixins.scss";
+@import "Variables.scss";
+
+div.content {
+    margin-top: 88px;
+
+    & > div.top-bar {
+        background-color: #6b5b48;
+        padding: 8px;
+
+        & > div.name-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & > img.logo {
+                width: 48px;
+                margin-right: 6px;
+            }
+        }
+
+        & > div.slogan-wrap {
+            text-align: center;
+            font-size: 1.2em;
+            color: #cd832f;
+            position: relative;
+            top: -10px;
+            opacity: 0.8;
+        }
+
+        & > div.sub-wrap {
+            text-align: center;
+            font-size: 1.8em;
+        }
+    }
+
+    & > div.button-wrap {
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+
+        & > form {
+            display: block;
+            margin-left: 14px;
+            margin-right: 14px;
+        }
+    }
+
+    & > div.info-wrap {
+        background-color: $contentBgColor;
+        padding: 16px;
+        margin-top: 48px;
+
+        div.text-wrap {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            top: 0px;
+
+            & > div.inner {
+                & > div.icon-wrap {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 22px;
+                    margin-top: 46px;
+                    width: 100%;
+
+                    & > img {
+                        max-width: 122px;
+                        max-height: 122px;
+                        margin-left: 6px;
+                        margin-right: 6px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media(md) {
+    div.content {
+        margin-top: 144px;
+
+        & > div.info-wrap {
+            div.text-wrap {
+                top: 52px;
+
+                & > div.inner {
+                    & > div.icon-wrap {
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+
+                        & > img {
+                            max-width: 62px;
+                            max-height: 62px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

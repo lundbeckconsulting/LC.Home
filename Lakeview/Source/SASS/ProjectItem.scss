@@ -1,0 +1,37 @@
+﻿@import "Variables.scss";
+
+div.project-items-wrap {
+    & > div.item-wrap {
+        & > div.top-wrap {
+            background-color: darken($contentBgColor, 20%);
+            padding: 8px;
+            display: flex;
+
+            & > h3 {
+                flex: 1 1 auto;
+                color: $lightColor;
+            }
+
+            & > div.visit-wrap {
+                flex: 0 0 170px;
+
+                & > a.link > span.symbol {
+                    font-size: 2em;
+                }
+            }
+        }
+
+        &  > div.info-wrap {
+            background-color: darken($contentBgColor, 6%);
+            position: relative;
+            padding: 16px;
+            margin-bottom: 34px;
+        }
+
+        & > div.pics-wrap {
+            background-color: darken($contentBgColor, 32%);
+            position: relative;
+            top: -46px;
+        }
+    }
+}

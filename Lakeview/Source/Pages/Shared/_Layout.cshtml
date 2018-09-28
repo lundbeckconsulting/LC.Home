@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html class="default-html bg-cover">
+<head>
+    <lc:common-controls site-id="7" type="GoogleAnalyctics" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <lc:common-controls site-id="7" type="Meta" />
+    <title>@ViewData["Title"] - Lundbeck Consulting</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lekton" rel="stylesheet">
+
+    <lc:common-controls site-id="7" type="CSS" version="1.0.4" />
+
+    <lc:include src="creator.controls.1.0.4.css" />
+    <lc:include src="layout.css" />
+
+
+    @RenderSection("CSS", required: false)
+</head>
+@{
+    string bg = "bg-one";
+    string path = this.Context.Request.Path;
+    bool showTop = true;
+
+    switch(path.ToLower())
+    {
+        case "/":
+            showTop = false;
+            break;
+
+        case "/about":
+            bg = "bg-two";
+            break;
+
+        case "/project":
+            bg = "bg-three";
+            break;
+
+        case "/cv":
+            bg = "bg-four";
+            break;
+    }
+        }
+<body class="default-body bg-cover @Html.Raw(bg)">
+    @if (showTop)
+    {
+        <nav class="default-top top">
+            <div class="logo-wrap">
+                <a asp-page="Index" title="Gå til startside">
+                    <img src="/IMAGES/logo.png" class="logo" /> <span class="company-name">Lundbeck Consulting</span>
+                </a>
+            </div>
+            <div class="action-wrap">
+                <div class="inner">
+                    <a asp-page="About">Om Meg</a>
+                    <a asp-page="Project">Prosjekter</a>
+                </div>
+            </div>
+        </nav>
+    }
+        <div class="default-body-content">
+            <div class="container body-content">
+
+                @RenderBody()
+
+                <footer class="default-footer">
+                    <div class="inner">
+                        <a asp-page="Index" title="Gå til startside">
+                            <p>&copy; 2018 / Lundbeck Consulting</p>
+                        </a>
+                        <p>
+                            <a asp-page="About" title="Om Meg">Om Meg</a> <span class="separator">|</span> <a asp-page="Project" title="Prosjekter">Prosjekter</a>
+                        </p>
+                        <p>
+                            <a href="tel:+4792205613"><lc:fa name="phone-square" /> 922 05 613</a> <span class="separator">|</span> <a href="mailto:stein@lundbeckconsulting.no"><lc:fa name="envelope-square" /> stein@lundbe...no</a>
+                        </p>
+                        <p>
+                            <a href="https://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=984193483" target="_blank"><lc:fa name="building" /> 984 193 483</a>
+                        </p>
+                    </div>
+                </footer>
+            </div>
+
+            <button class=""><span><i /><span>Sace</span></span></button>
+        </div>
+
+    <lc:common-controls site-id="7" />
+    <lc:common-controls site-id="7" type="JavaScript" version="1.0.4" />
+
+    @RenderSection("SCRIPTS", required: false)
+</body>
+</html>
