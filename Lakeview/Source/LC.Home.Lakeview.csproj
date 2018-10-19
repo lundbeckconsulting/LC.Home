@@ -12,6 +12,12 @@
     <Content Remove="wwwroot\CSS\creator.controls.1.0.4.min.css" />
     <Content Remove="wwwroot\CSS\creator.layout.1.0.4.css" />
     <Content Remove="wwwroot\CSS\creator.layout.1.0.4.min.css" />
+    <Content Remove="wwwroot\CSS\Creator\creator.common.1.0.4.css" />
+    <Content Remove="wwwroot\CSS\Creator\creator.common.1.0.4.min.css" />
+    <Content Remove="wwwroot\CSS\Creator\creator.controls.1.0.4.css" />
+    <Content Remove="wwwroot\CSS\Creator\creator.controls.1.0.4.min.css" />
+    <Content Remove="wwwroot\CSS\Creator\creator.layout.1.0.4.css" />
+    <Content Remove="wwwroot\CSS\Creator\creator.layout.1.0.4.min.css" />
     <Content Remove="wwwroot\SCRIPT\creator.1.0.4.js" />
     <Content Remove="wwwroot\SCRIPT\creator.1.0.4.min.js" />
     <Content Remove="wwwroot\SCRIPT\creator.common.1.0.4.js" />
@@ -34,22 +40,14 @@
 
   <ItemGroup>
     <None Include="compilerconfig.json" />
-    <None Include="wwwroot\CSS\creator.common.1.0.4.css">
+    <None Include="wwwroot\CSS\Creator\creator.common.1.0.4.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="wwwroot\CSS\creator.common.1.0.4.min.css" />
-    <None Include="wwwroot\CSS\creator.controls.1.0.4.css" />
-    <None Include="wwwroot\CSS\creator.controls.1.0.4.min.css" />
-    <None Include="wwwroot\CSS\creator.layout.1.0.4.css" />
-    <None Include="wwwroot\CSS\creator.layout.1.0.4.min.css" />
-    <None Include="wwwroot\SCRIPT\creator.1.0.4.js" />
-    <None Include="wwwroot\SCRIPT\creator.1.0.4.min.js" />
-    <None Include="wwwroot\SCRIPT\creator.common.1.0.4.js" />
-    <None Include="wwwroot\SCRIPT\creator.common.1.0.4.min.js" />
-    <None Include="wwwroot\SCRIPT\creator.controls.1.0.4.js" />
-    <None Include="wwwroot\SCRIPT\creator.controls.1.0.4.min.js" />
-    <None Include="wwwroot\SCRIPT\creator.layout.1.0.4.js" />
-    <None Include="wwwroot\SCRIPT\creator.layout.1.0.4.min.js" />
+    <None Include="wwwroot\CSS\Creator\creator.common.1.0.4.min.css" />
+    <None Include="wwwroot\CSS\Creator\creator.controls.1.0.4.css" />
+    <None Include="wwwroot\CSS\Creator\creator.controls.1.0.4.min.css" />
+    <None Include="wwwroot\CSS\Creator\creator.layout.1.0.4.css" />
+    <None Include="wwwroot\CSS\Creator\creator.layout.1.0.4.min.css" />
   </ItemGroup>
 
 </Project>
