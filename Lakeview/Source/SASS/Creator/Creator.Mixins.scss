@@ -60,6 +60,12 @@
     background-size: cover;
 }
 
+@mixin bgCoverWithImage($imagePath) {
+    background-image: url($imagePath);
+
+    @include bgCover();
+}
+
 @mixin fontOutline($size, $color: white, $outlineColor: black) {
     $s: map-get($fontOutlineSizesMap, $size);
 
@@ -112,14 +118,14 @@
                 $p: percentage(strip-units($nr) / 12);
 
                 flex: 1 1 $p;
+                max-width: $p;
             }
         }
     }
     @else {
         flex: 1 1 auto;
+        max-width: $p;
     }
-
-    max-width: $p;
 }
 
 @mixin noOverflow() {
@@ -169,6 +175,23 @@
         transition-delay: .1s;
         transition-property: all;
     }
+}
+
+@mixin defaultModal() {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 6%);
+    border: 8px solid #003664;
+    border-radius: 8px;
+    width: 100%;
+    z-index: 10;
+}
+
+@mixin centerAbsolute() {
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
 
 @function response() {
