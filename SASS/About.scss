@@ -1,0 +1,11 @@
+﻿@import "Variables.scss";
+
+img.mind-gears {
+    max-width: 200px;
+    position: relative;
+    top: 42px;
+}
+
+.download-wrap {
+    background-color: lighten($colorSecondary, 34%);
+}

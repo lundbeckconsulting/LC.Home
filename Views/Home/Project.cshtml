@@ -1,0 +1,37 @@
+﻿@using LC.Home.Blitz.Data.Models;
+@using LC.Assets.Components.Extensions;
+
+@{
+    ViewData["Title"] = "Prosjekter";
+    ViewData["Header"] = "Prosjekter";
+}
+
+@section CSS {
+    <lc:include src="Project.css" />
+}
+
+@foreach (Project project in await _data.GetProjects())
+{
+    <div class="project">
+        <a href="@project.URL" target="_blank"></a>
+        <div class="row">
+            <div class="col-md-3"><h2 class="h4">@project.Header</h2></div>
+            <div class="col-md-9">
+                @Html.Raw(project.Description)
+                @if (!project.GitHubURL.IsNull() || !project.URL.Equals("#"))
+                {
+                <div class="pad-doc links">
+                    @if (!project.URL.IsNull() && !project.URL.Equals("#"))
+                    {
+                        <a href="@project.URL" target="_blank" class="btn-info"><icon type="Globe" size="SM" /> Gå til</a>
+                    }
+                    @if (!project.GitHubURL.IsNull())
+                    {
+                        <a href="@project.GitHubURL" target="_blank" class="btn-warning"><icon type="GitHub" size="SM" /> GitHub</a>
+                    }
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+}

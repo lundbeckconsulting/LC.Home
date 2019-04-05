@@ -1,0 +1,22 @@
+﻿[
+  {
+    "outputFile": "wwwroot/CSS/Layout.css",
+    "inputFile": "SASS/Layout.scss"
+  },
+  {
+    "outputFile": "wwwroot/CSS/Index.css",
+    "inputFile": "SASS/Index.scss"
+  },
+  {
+    "outputFile": "wwwroot/CSS/About.css",
+    "inputFile": "SASS/About.scss"
+  },
+  {
+    "outputFile": "wwwroot/CSS/Project.css",
+    "inputFile": "SASS/Project.scss"
+  },
+  {
+    "outputFile": "wwwroot/SCRIPT/Layout.js",
+    "inputFile": "SCRIPT/Layout.js"
+  }
+]

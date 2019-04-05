@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+    <Content Remove="wwwroot\CSS\Creator\Creator.css" />
+    <Content Remove="wwwroot\CSS\Creator\Creator.min.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\LC Development\LC.Assets.Core\LC.Assets.Core.csproj" />
+    <ProjectReference Include="..\..\LC Development\LC.Assets\LC.Assets.csproj" />
+    <ProjectReference Include="..\..\LC Development\LC.Creator\LC.Creator.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
+    <None Include="wwwroot\CSS\Creator\Creator.css" />
+    <None Include="wwwroot\CSS\Creator\Creator.min.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
+</Project>

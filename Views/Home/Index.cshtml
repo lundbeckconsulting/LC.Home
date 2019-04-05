@@ -1,0 +1,43 @@
+﻿@using LC.Home.Blitz.Data.Models;
+
+@{
+    ViewData["Title"] = "Velkommen til muligheter";
+}
+
+@section CSS {
+	<lc:include src="Index.css" />
+}
+
+<div class="dis-table mrg-auto">
+    <div class="row">
+        <div class="col-md-5 show-md">
+            <img src="~/IMAGE/logo-half.png" alt="logo" title="Lundbeck Consulting" class="logo-half r" />
+        </div>
+        <div class="col-xs-12 col-md-7 align-center">
+            <h1 class="h3 h2-md">Lundbeck Consulting</h1>
+            <h3 class="h4 h3-md slogan">-Velkommen til muligheter-</h3>
+            <h2 class="h5 h2-md intro">
+                Design<span class="separator">|</span>Programmering<span class="separator">|</span>Drift
+            </h2>
+            <div class="btn-wrap">
+                <a asp-action="About" class="btn">Om Meg</a><span class="separator">|</span><a asp-action="Project" class="btn">Prosjekter</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <h3 class="h5">
+        Nyheter
+    </h3>
+    <div class="items">
+        @foreach(HistoryItem item in await _data.GetHistory()) {
+            <a href="@item.URL" target="_blank">
+                <div class="row airy">
+                    <div class="col-md-2">@item.DateCreated.ToString("dd.MM.yyyy")</div>
+                    <div class="col-md-4">@item.Header</div>
+                    <div class="col-md-6">@item.Description</div>
+                </div>
+            </a>
+        }
+    </div>
+</div>
