@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace LC.Home.Blitz.Data.Models
+﻿namespace LC.Home.Blitz.Data.Models
 {
     public interface IHistoryItem : IModelBase
     {
@@ -12,10 +7,10 @@ namespace LC.Home.Blitz.Data.Models
         string URL { get; set; }
     }
 
-    public class HistoryItem : ModelBase, IHistoryItem
+    public class HistoryItem : ModelsBase, IHistoryItem
     {
         public string Header { get; set; }
         public string Description { get; set; }
-        public string URL { get; set; } = "#";
+        public string URL { get; set; }
     }
 }

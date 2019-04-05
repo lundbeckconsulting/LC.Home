@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace LC.Home.Blitz.Data.Models
 {
@@ -12,7 +9,7 @@ namespace LC.Home.Blitz.Data.Models
         DateTime DateCreated { get; set; }
     }
 
-    public abstract class ModelBase : IModelBase
+    public class ModelsBase : IModelBase
     {
         public int Id { get; set; }
         public bool Active { get; set; }

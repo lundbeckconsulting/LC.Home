@@ -2,105 +2,61 @@
 @import "Creator/Media.scss";
 
 body.creator {
-    font-family: 'Arial Rounded MT', Verdana, 'Lucida Sans Unicode', sans-serif;
     color: $colorMain;
+    font-family: 'Arial Rounded MT', Verdana, 'Lucida Sans Unicode', sans-serif;
+}
+
+a {
+    color: lighten($colorMain, 12%);
+    text-decoration: none;
+
+    &:hover {
+        color: $colorMain;
+        text-decoration: underline;
+    }
 }
 
 header.creator {
-    & > .inner {
-        & > a.brand {
-            flex: 0 0 200px;
-
-            & > .logo {
-                width: 100%;
-                flex: 0 0 62px;
-            }
-
-            & > .name {
-                flex: 1 1 auto;
-            }
-        }
-
-        & > .links {
-            position: relative;
-            top: 20px;
-
-            & > .inner {
-                & > a {
-                    font-size: 2.8rem;
-                }
-
-                & > .separator {
-                    font-size: 3.4rem;
-                    margin-left: 16px;
-                    margin-right: 16px;
-                    opacity: 0.6;
-                }
-            }
-        }
+    & img.logo {
+        width: 82px;
+        height: 82px;
     }
 }
 
 footer.creator {
     background-color: lighten($colorLight, 8%);
 
-    & > .links {
+    & span.separator {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+}
+
+nav {
+    position: relative;
+    top: 18px;
+
+    & > .link-wrap {
+        position: relative;
+        top: 16px;
+
+        & > .link {
+            font-size: 3rem;
+        }
+
         & > .separator {
-            display: block;
-            margin-left: 6px;
-            margin-right: 6px;
+            margin-left: 8px;
+            margin-right: 8px;
+            font-size: 3.4rem;
+            opacity: 0.6;
         }
     }
 
-    & > .contact {
-        & > .separator {
-            display: block;
-            margin-left: 6px;
-            margin-right: 6px;
-        }
-    }
-}
-
-a {
-    color: lighten($colorMain, 18%);
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: underline;
-        color: $colorMain;
-    }
-}
-
-#burgerMenu {
-    font-size: 1rem;
-}
-
-#burger {
-    background-color: rgba(black, 0.8);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 88;
-
-    & > a {
-        color: white;
-        font-size: 2rem;
-        margin-top: 12px;
-        display: block;
-    }
-}
-
-@include media() {
-    header.creator {
-        & > .inner {
-            & > a.brand {
-                flex: 0 0 600px;
-
-                & > .logo {
-                    flex: 0 0 128px;
-                }
+    @include media() {
+        header.creator {
+            & img.logo {
+                width: 142px;
+                height: 142px;
             }
         }
     }

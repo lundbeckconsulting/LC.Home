@@ -7,7 +7,7 @@
         int OrderBy { get; set; }
     }
 
-    public class ProjectImage : ModelBase, IProjectImage
+    public class ProjectImage : ModelsBase, IProjectImage
     {
         public int ProjectId { get; set; }
         public string Filename { get; set; }

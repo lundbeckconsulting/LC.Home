@@ -17,7 +17,7 @@ namespace LC.Home.Blitz
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<LCContext>(opt => opt.UseSqlServer(this.Configuration.GetConnectionString("Default")));
-            services.AddTransient<DataRepo>();
+            services.AddTransient<IDataRepo, DataRepo>();
 
             services.AddLCAssetsConfig();
 			services.AddLCAssetsDBContext();			

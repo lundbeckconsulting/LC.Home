@@ -6,52 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <lc:include type="Meta" />
 	<lc:include type="MetaLayout" />
-    <lc:include type="MetaLayout" />
     @await RenderSectionAsync("META", false)
 
     <title>@ViewData["Title"] - Lundbeck Consulting</title>
     <lc:include type="FavIcon" />
 
     <lc:include type="FontAwesome" />
-
     <lc:include type="CreatorCSS" min="true" />
 	<lc:include src="Layout.css" />
     @await RenderSectionAsync("CSS", false)
 </head>
 <body class="creator">
-    <div id="burger" class="hide align-center pad-doc">
-        <a asp-action="Index">Hjem</a>
-        <br />
-        <a asp-action="About">Om Meg</a>
-        <br />
-        <a asp-action="Project">Prosjekter</a>
-    </div>
-
 	@if (!_siteHelper.IsIndex)
     {
         <header class="creator">
             <div class="inner flex-space-between">
-                <a asp-action="Index" class="brand flex-center-center">
-                    <img src="/IMAGE/logo-half.png" class="logo" />
-                    <h1 class="h4 h2-md name">Lundbeck Consulting</h1>
-                </a>
-                <div class="links show-md pad-doc">
-                    <div class="inner flex-center-center align-right">
-                        <a asp-action="Index">Hjem</a><span class="separator">|</span><a asp-action="About">Om Meg</a><span class="separator">|</span><a asp-action="Project">Prosjekter</a>
-                    </div>
+                <div>
+                    <a asp-action="Index" class="flex-center-center">
+                        <img src="~/IMAGE/logo.png" class="logo" />
+                        <h1 class="h2 show-md">Lundbeck Consulting</h1>
+                    </a>
                 </div>
-                <div class="burger hide-md">
-                    <icon id="burgerMenu" type="Bars" out="Span" />
+                <div>
+                    <nav>
+                        <div class="link-wrap show-sm">
+                            <a asp-action="Index" class="link">Hjem</a><span class="separator">|</span><a asp-action="About" class="link">Om Meg</a><span class="separator">|</span><a asp-action="Project" class="link">Prosjekter</a>
+                        </div>
+                        <icon id="barsMenuIcon" type="Bars" size="MD" class="hide-sm" />
+                    </nav>
                 </div>
             </div>
         </header>
     }
 
     <main role="main" class="creator">
-        @if (ViewData.Keys.Contains("Header"))
+        @if (ViewData.ContainsKey("Header"))
         {
-            <div class="header-wrap">
-                <h1 class="h2">@ViewData["Header"]</h1>
+            <div class="header">
+                <h1 class="h2 h1-lg bold">@ViewData["Header"]</h1>
             </div>
         }
 
@@ -64,15 +56,15 @@
                 &copy; 2019 / Lundbeck Consulting
             </a>
         </p>
-        <p class="flex-center-center links">
+        <p class="flex-center-center">
             <a asp-action="About">Om Meg</a><span class="separator">|</span><a asp-action="Project">Prosjekter</a>
         </p>
-        <p class="contact flex-center-center airy-lg">
-            <icon type="PhoneFull" out="Span" size="SM" />&nbsp;<a href="tel:+4792205613">Ring</a><span class="separator">|</span><icon type="EnvelopeFull" out="Span" size="SM" />&nbsp;<a href="mailto:stein@lundbeckconsulting.no">Email</a>
+        <p class="flex-center-center pad-doc">
+            <a href="tel:+4792205613"><icon type="PhoneFull" /> Ring</a><span class="separator">|</span><a href="mailto:stein@lundbeckconsulting.no"><icon type="EnvelopeFull" /> Email</a>
         </p>
         <p>
-            <icon type="Building" out="Span" size="SM" />&nbsp;<a href="https://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=984193483" target="_blank">Org.nr 984 193 483</a>
-        </p>
+            <a href="https://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=984193483" target="_blank"><icon type="Building" /> Org.nr 984 193 483</a>
+        </p> 
     </footer>
 
     <lc:include type="jQuery" />

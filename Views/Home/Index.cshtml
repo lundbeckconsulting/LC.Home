@@ -11,31 +11,28 @@
 <div class="dis-table mrg-auto">
     <div class="row">
         <div class="col-md-5 show-md">
-            <img src="~/IMAGE/logo-half.png" alt="logo" title="Lundbeck Consulting" class="logo-half r" />
+            <img src="~/IMAGE/logo.png" class="logo r" />
         </div>
         <div class="col-xs-12 col-md-7 align-center">
-            <h1 class="h3 h2-md">Lundbeck Consulting</h1>
-            <h3 class="h4 h3-md slogan">-Velkommen til muligheter-</h3>
-            <h2 class="h5 h2-md intro">
-                Design<span class="separator">|</span>Programmering<span class="separator">|</span>Drift
-            </h2>
-            <div class="btn-wrap">
-                <a asp-action="About" class="btn">Om Meg</a><span class="separator">|</span><a asp-action="Project" class="btn">Prosjekter</a>
+            <h1 class="f-4 f-5-sm f-8-md ws-nowrap">Lundbeck Consulting</h1>
+            <h2 class="h5 h4-md h3-lg slogan">-Velkommen til muligheter-</h2>
+            <h3 class="h4 h3-md h2-lg points">Design<span class="separator">|</span>Utvikling<span class="separator">|</span>Drift</h3>
+            <div class="flex-center-center links">
+                <a asp-action="About" class="f-3 f-6-md f-7-lg link"><icon type="UserNinja" /> Om Meg</a><span class="separator">|</span><a asp-action="Project" class="f-3 f-6-md f-7-lg link"><icon type="Code" /> Prosjekter</a>
             </div>
         </div>
     </div>
 </div>
-<div>
-    <h3 class="h5">
-        Nyheter
-    </h3>
+<div class="container-auto event-wrap">
+    <h2 class="h3">Nyheter</h2>
     <div class="items">
-        @foreach(HistoryItem item in await _data.GetHistory()) {
-            <a href="@item.URL" target="_blank">
-                <div class="row airy">
-                    <div class="col-md-2">@item.DateCreated.ToString("dd.MM.yyyy")</div>
+        @foreach(HistoryItem item in await _data.GetHistory())
+        {
+            <a href="@item.URL" target="_blank" class="item">
+                <div class="row">
+                    <div class="col-md-2"><strong>@item.DateCreated.ToString("dd.MM.yyyy")</strong></div>
                     <div class="col-md-4">@item.Header</div>
-                    <div class="col-md-6">@item.Description</div>
+                    <div class="col-md-6">@Html.Raw(item.Description)</div>
                 </div>
             </a>
         }

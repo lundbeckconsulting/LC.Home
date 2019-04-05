@@ -1,30 +1,38 @@
 ﻿using LC.Home.Blitz.Data.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace LC.Home.Blitz.Data
 {
-    public class DataRepo
+    public interface IDataRepo
     {
-        private LCContext _context;
+        Task<IEnumerable<HistoryItem>> GetHistory();
+        Task<IEnumerable<Project>> GetProjects();
+    }
+
+    public class DataRepo : IDataRepo
+    {
+        private LCContext _data;
 
         public DataRepo(LCContext context)
         {
-            _context = context;
+            _data = context;
         }
+
 
         public async Task<IEnumerable<HistoryItem>> GetHistory()
         {
-            var result = await _context.HistoryItems.Where(itm => itm.Active).OrderByDescending(itm => itm.DateCreated).ToListAsync();
+            var result = await _data.HistoryItems.OrderByDescending(itm => itm.DateCreated).ToListAsync();
 
             return result;
         }
 
         public async Task<IEnumerable<Project>> GetProjects()
         {
-            var result = await _context.Projects.Include(pr => pr.Images).Where(pr => pr.Active).OrderBy(pr => pr.OrderBy).ToListAsync();
+            var result = await _data.Projects.Include(prj => prj.Images).Where(prj => prj.Active).OrderBy(prj => prj.OrderBy).ToListAsync();
 
             return result;
         }

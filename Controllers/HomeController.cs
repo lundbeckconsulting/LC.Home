@@ -1,9 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 
 
-namespace LC.Home.Blitz
+namespace LC.Home.Blitz.Controllers
 {
-    public class Home : Controller
+    public class HomeController : Controller
     {
         public IActionResult Index()
         {
@@ -14,6 +19,7 @@ namespace LC.Home.Blitz
         {
             return View();
         }
+
         public IActionResult Project()
         {
             return View();
