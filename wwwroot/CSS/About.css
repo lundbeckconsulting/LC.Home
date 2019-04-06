@@ -3,8 +3,10 @@
   .download-wrap a.link {
     font-size: 2.4rem; }
 
-img.mind-gears {
-  max-width: 204px; }
+.mind-wrap {
+  background-color: #b6d4ed; }
+  .mind-wrap > img.mind-gears {
+    max-width: 204px; }
 
 .contact-wrap {
   background-color: #b6d4ed; }

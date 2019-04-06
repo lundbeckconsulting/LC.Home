@@ -17,6 +17,21 @@
     @await RenderSectionAsync("CSS", false)
 </head>
 <body class="creator">
+    <div id="burgerMenu" class="hide align-center">
+        <p>
+            <a asp-action="Index" class="link">Hjem</a>
+        </p>
+        <p>
+            <a asp-action="About" class="link">Om Meg</a>
+        </p>
+        <p>
+            <a asp-action="Project" class="link">Prosjekter</a>
+        </p>
+        <p class="contact">
+            <a href="tel:+4792205613" class="link"><icon type="PhoneFull" /> Ring</a><span class="separator">|</span><a href="mailto:stein@lundbeckconsulting.no" class="link"><icon type="EnvelopeFull" /> Email</a>
+        </p>
+    </div>
+
 	@if (!_siteHelper.IsIndex)
     {
         <header class="creator">

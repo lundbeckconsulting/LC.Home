@@ -16,6 +16,31 @@ a {
     }
 }
 
+#burgerMenu {
+    background-color: rgba(black, 0.8);
+    padding: 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+
+    & a.link {
+        color: white;
+        font-size: 2.4rem;
+    }
+
+    & > .contact {
+        margin-top: 42px;
+
+        & > .separator {
+            margin-left: 12px;
+            margin-right: 12px;
+        }
+    }
+}
+
 header.creator {
     & img.logo {
         width: 82px;

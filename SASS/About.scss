@@ -1,19 +1,25 @@
 ﻿@import "Variables.scss";
 
 .download-wrap {
-    background-color: lighten($colorBabyBlue, 38%);
+    background-color: $colorContent;
 
     & a.link {
         font-size: 2.4rem;
     }
 }
 
-img.mind-gears {
-    max-width: 204px;
+.mind-wrap {
+    background-color: $colorContent;
+
+    & > img.mind-gears {
+        max-width: 204px;
+    }
 }
 
+
+
 .contact-wrap {
-    background-color: lighten($colorBabyBlue, 38%);
+    background-color: $colorContent;
 
     & > .contact-links {
         & > a.link {
