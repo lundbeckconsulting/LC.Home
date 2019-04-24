@@ -1,4 +1,23 @@
 ﻿@import "Variables.scss";
+@import "Creator/Media.scss";
+
+.tech-logo {
+    flex-direction: column;
+
+    & > .link > .logo {
+        max-height: 52px;
+        margin: 6px;
+    }
+
+    & > .separator {
+        margin-left: 18px;
+        margin-right: 18px;
+        font-size: 8rem;
+        opacity: 0.4;
+        position: relative;
+        top: -4px;
+    }
+}
 
 .download-wrap {
     background-color: $colorContent;
@@ -16,8 +35,6 @@
     }
 }
 
-
-
 .contact-wrap {
     background-color: $colorContent;
 
@@ -30,5 +47,11 @@
             margin-left: 12px;
             margin-right: 12px;
         }
+    }
+}
+
+@include media() {
+    .tech-logo {
+        flex-direction: row;
     }
 }

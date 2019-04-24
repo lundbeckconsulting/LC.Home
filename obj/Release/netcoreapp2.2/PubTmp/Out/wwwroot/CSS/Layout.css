@@ -1,0 +1,56 @@
+﻿body.creator {
+  color: #05233b;
+  font-family: 'Arial Rounded MT', Verdana, 'Lucida Sans Unicode', sans-serif; }
+
+a {
+  color: #0a4473;
+  text-decoration: none; }
+  a:hover {
+    color: #05233b;
+    text-decoration: underline; }
+
+#burgerMenu {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 18px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99; }
+  #burgerMenu a.link {
+    color: white;
+    font-size: 2.4rem; }
+  #burgerMenu > .contact {
+    margin-top: 42px; }
+    #burgerMenu > .contact > .separator {
+      margin-left: 12px;
+      margin-right: 12px; }
+
+header.creator img.logo {
+  width: 82px;
+  height: 82px; }
+
+footer.creator {
+  background-color: #eaf1f6; }
+  footer.creator span.separator {
+    margin-left: 6px;
+    margin-right: 6px; }
+
+nav {
+  position: relative;
+  top: 18px; }
+  nav > .link-wrap {
+    position: relative;
+    top: 16px; }
+    nav > .link-wrap > .link {
+      font-size: 3rem; }
+    nav > .link-wrap > .separator {
+      margin-left: 8px;
+      margin-right: 8px;
+      font-size: 3.4rem;
+      opacity: 0.6; }
+  @media (min-width: 768px) {
+    nav header.creator img.logo {
+      width: 142px;
+      height: 142px; } }

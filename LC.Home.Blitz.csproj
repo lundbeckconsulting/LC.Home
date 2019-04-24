@@ -6,6 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\CSS\Creator\Creator.css" />
+    <Content Remove="wwwroot\CSS\Creator\Creator.min.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
   </ItemGroup>
@@ -18,6 +23,11 @@
 
   <ItemGroup>
     <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\CSS\Creator\Creator.css" />
+    <None Include="wwwroot\CSS\Creator\Creator.min.css" />
   </ItemGroup>
 
 </Project>
