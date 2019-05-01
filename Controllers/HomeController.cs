@@ -15,12 +15,12 @@ namespace LC.Home.Blitz.Controllers
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult OmLundbeckConsulting()
         {
             return View();
         }
 
-        public IActionResult Project()
+        public IActionResult MineProsjekter()
         {
             return View();
         }

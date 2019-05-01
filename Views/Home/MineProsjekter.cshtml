@@ -2,8 +2,8 @@
 @using LC.Assets.Components.Extensions;
 
 @{
-    ViewData["Title"] = "Mine Prosjekter";
-    ViewData["Header"] = "Prosjekter";
+    ViewData["Title"] = _localizer["Title"];
+    ViewData["Header"] = _localizer["Title"];
 }
 
 @section CSS {
@@ -11,7 +11,7 @@
 }
 
 <div class="items">
-    @foreach (Project project in await _data.GetProjects())
+    @foreach (Project project in await _data.GetProjects(_siteHelper.CurrentCulture.ToString()))
     {
         <div class="item">
             <div class="row">
@@ -23,12 +23,12 @@
                     <div class="links">
                         @if (!project.URL.Equals("#"))
                         {
-                            <a href="@project.URL" target="_blank" class="btn-info link"><icon type="Globe" /> Besøk</a>
+                            <a href="@project.URL" target="_blank" class="btn-info link" title="@_sharedLocalizer["WordVisit"]"><icon type="Globe" /> @_sharedLocalizer["WordVisit"]</a>
                         }
 
                         @if (!project.GitHubURL.IsNull())
                         {
-                            <a href="@project.GitHubURL" target="_blank" class="btn-warning link"><icon type="GitHub" /> GitHub</a>
+                            <a href="@project.GitHubURL" target="_blank" class="btn-warning link" title="GitHub"><icon type="GitHub" /> GitHub</a>
                         }
                     </div>
                 </div>

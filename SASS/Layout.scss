@@ -50,10 +50,22 @@ header.creator {
 
 footer.creator {
     background-color: lighten($colorLight, 8%);
+    position: relative;
 
     & span.separator {
         margin-left: 6px;
         margin-right: 6px;
+    }
+}
+
+#languageSymbols {
+    position: absolute;
+    left: 22px;
+    top: -20px;
+
+    & > a > .flag {
+        width: 32px;
+        margin-left: 6px;
     }
 }
 

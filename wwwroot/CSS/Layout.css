@@ -32,10 +32,19 @@ header.creator img.logo {
   height: 82px; }
 
 footer.creator {
-  background-color: #eaf1f6; }
+  background-color: #eaf1f6;
+  position: relative; }
   footer.creator span.separator {
     margin-left: 6px;
     margin-right: 6px; }
+
+#languageSymbols {
+  position: absolute;
+  left: 22px;
+  top: -20px; }
+  #languageSymbols > a > .flag {
+    width: 32px;
+    margin-left: 6px; }
 
 nav {
   position: relative;

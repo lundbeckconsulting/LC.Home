@@ -19,16 +19,16 @@
 <body class="creator">
     <div id="burgerMenu" class="hide align-center">
         <p>
-            <a asp-action="Index" class="link">Hjem</a>
+            <a asp-action="Index" class="link">@_sharedLocalizer["WordHome"]</a>
         </p>
         <p>
-            <a asp-action="About" class="link">Om Meg</a>
+            <a asp-action="OmLundbeckConsulting" class="link">@_sharedLocalizer["PhraseAboutMe"]</a>
         </p>
         <p>
-            <a asp-action="Project" class="link">Prosjekter</a>
+            <a asp-action="MineProsjekter" class="link">@_sharedLocalizer["WordProjects"]</a>
         </p>
         <p class="contact">
-            <a href="tel:+4792205613" class="link"><icon type="PhoneFull" /> Ring</a><span class="separator">|</span><a href="mailto:stein@lundbeckconsulting.no" class="link"><icon type="EnvelopeFull" /> Email</a>
+            <a href="tel:+4792205613" class="link"><icon type="PhoneFull" /> @_sharedLocalizer["WordCall"]</a><span class="separator">|</span><a href="mailto:stein@lundbeckconsulting.no" class="link"><icon type="EnvelopeFull" /> @_sharedLocalizer["WordEmail"]</a>
         </p>
     </div>
 
@@ -38,14 +38,14 @@
             <div class="inner flex-space-between">
                 <div>
                     <a asp-action="Index" class="flex-center-center">
-                        <img src="~/IMAGE/logo.png" class="logo" />
-                        <h1 class="h2 show-md">Lundbeck Consulting</h1>
+                        <img src="/IMAGE/logo.png" class="logo" alt="Logo" title="Logo" />
+                        <h1 class="h2 show-md">@_sharedLocalizer["CoName"]</h1>
                     </a>
                 </div>
                 <div>
                     <nav>
                         <div class="link-wrap show-sm">
-                            <a asp-action="Index" class="link">Hjem</a><span class="separator">|</span><a asp-action="About" class="link">Om Meg</a><span class="separator">|</span><a asp-action="Project" class="link">Prosjekter</a>
+                            <a asp-action="Index" class="link">@_sharedLocalizer["WordHome"]</a><span class="separator">|</span><a asp-action="OmLundbeckConsulting" class="link">@_sharedLocalizer["PhraseAboutMe"]</a><span class="separator">|</span><a asp-action="MineProsjekter" class="link">@_sharedLocalizer["WordProjects"]</a>
                         </div>
                         <icon id="barsMenuIcon" type="Bars" size="MD" class="hide-sm" />
                     </nav>
@@ -66,16 +66,20 @@
     </main>
     
     <footer class="creator align-center">
+        <div id="languageSymbols" class="hide">
+            <a href="https://lundbeckconsulting.no" title="Lundbeck Consulting på Norsk"><img src="/IMAGE/norwegian-circle.png" class="flag" /></a>
+            <a href="https://lundbeckconsulting.com" title="Lundbeck Consulting in English"><img src="/IMAGE/english-circle.png" class="flag" /></a>
+        </div>
         <p>
-            <a asp-action="Index">
+            <a asp-action="Index" title="Copyright">
                 &copy; 2019 / Lundbeck Consulting
             </a>
         </p>
         <p class="flex-center-center">
-            <a asp-action="About">Om Meg</a><span class="separator">|</span><a asp-action="Project">Prosjekter</a>
+            <a asp-action="OmLundbeckConsulting">@_sharedLocalizer["PhraseAboutMe"]</a><span class="separator">|</span><a asp-action="MineProsjekter">@_sharedLocalizer["WordProjects"]</a>
         </p>
         <p class="flex-center-center pad-doc">
-            <a href="tel:+4792205613"><icon type="PhoneFull" /> Ring</a><span class="separator">|</span><a href="mailto:stein@lundbeckconsulting.no"><icon type="EnvelopeFull" /> Email</a>
+            <a href="tel:+4792205613"><icon type="PhoneFull" /> @_sharedLocalizer["WordCall"]</a><span class="separator">|</span><a href="mailto:stein@lundbeckconsulting.no"><icon type="EnvelopeFull" /> @_sharedLocalizer["WordEmail"]</a>
         </p>
         <p>
             <a href="https://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=984193483" target="_blank"><icon type="Building" /> Org.nr 984 193 483</a>

@@ -10,27 +10,31 @@ namespace LC.Home.Blitz
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IHostingEnvironment environment)
         {
-            Configuration = configuration;
+            this.Configuration = configuration;
+            this.Environment = environment;
         }
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<LCContext>(opt => opt.UseSqlServer(this.Configuration.GetConnectionString("Default")));
             services.AddTransient<IDataRepo, DataRepo>();
 
+            services.AddLCAssetsSlugify();
             services.AddLCAssetsConfig();
-			services.AddLCAssetsDBContext();			
-			services.AddLCAssets();
+			services.AddLCAssetsDBContext();
+            services.AddLCAssetsAndLocalization();
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app)
         {
-			app.UseLCAssetsDebug(env);
-            app.UseLCAssetsHTTPS();
-            app.UseLCAssets();
+            app.UseLCAssetsHTTPS(this.Environment);
+            app.UseLCAssetsDebug(this.Environment);
+            app.UseLCAssetsLocalizationFromConfig();
+            app.UseLCAssetsSlugify();
         }
 
         public IConfiguration Configuration { get; }
+        public IHostingEnvironment Environment { get; }
     }
 }

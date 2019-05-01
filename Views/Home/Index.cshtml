@@ -1,7 +1,8 @@
 ﻿@using LC.Home.Blitz.Data.Models;
+@using System.Threading;
 
 @{
-    ViewData["Title"] = "Velkommen til muligheter";
+    ViewData["Title"] = _localizer["Title"];
 }
 
 @section CSS {
@@ -11,22 +12,22 @@
 <div class="dis-table mrg-auto">
     <div class="row">
         <div class="col-md-5 show-md">
-            <img src="~/IMAGE/logo.png" class="logo r" />
+            <img src="/IMAGE/logo.png" class="logo r" alt="Logo" title="Logo" />
         </div>
         <div class="col-xs-12 col-md-7 align-center">
-            <h1 class="f-4 f-5-sm f-8-md ws-nowrap">Lundbeck Consulting</h1>
-            <h2 class="h5 h4-md h3-lg slogan">-Velkommen til muligheter-</h2>
-            <h3 class="h4 h3-md h2-lg points">Design<span class="separator">|</span>Utvikling<span class="separator">|</span>Drift</h3>
+            <h1 class="f-4 f-5-sm f-8-md ws-nowrap">@_sharedLocalizer["CoName"]</h1>
+            <h2 class="h5 h4-md h3-lg slogan">-@_sharedLocalizer["CoSlogan"]-</h2>
+            <h3 class="h4 h3-md h2-lg points">@_sharedLocalizer["WordDesign"]<span class="separator">|</span>@_sharedLocalizer["WordDevelopment"]<span class="separator">|</span>@_sharedLocalizer["WordHosting"]</h3>
             <div class="flex-center-center links">
-                <a asp-action="About" class="f-3 f-6-md f-7-lg link"><icon type="UserNinja" /> Om Meg</a><span class="separator">|</span><a asp-action="Project" class="f-3 f-6-md f-7-lg link"><icon type="Code" /> Prosjekter</a>
+                <a asp-action="OmLundbeckConsulting" class="f-3 f-6-md f-7-lg link ws-nowrap"><icon type="UserNinja" /> @_sharedLocalizer["PhraseAboutMe"]</a><span class="separator">|</span><a asp-action="MineProsjekter" class="f-3 f-6-md f-7-lg link ws-nowrap"><icon type="Code" /> @_sharedLocalizer["WordProjects"]</a>
             </div>
         </div>
     </div>
 </div>
 <div class="container-auto event-wrap">
-    <h2 class="h3">Nyheter</h2>
+    <h2 class="h3">@_sharedLocalizer["WordNews"]</h2>
     <div class="items">
-        @foreach(HistoryItem item in await _data.GetHistory())
+        @foreach(HistoryItem item in await _data.GetHistory(_siteHelper.CurrentCulture.ToString()))
         {
             <a href="@item.URL" target="_blank" class="item">
                 <div class="row">
