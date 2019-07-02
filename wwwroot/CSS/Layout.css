@@ -49,17 +49,18 @@ footer.creator {
 nav {
   position: relative;
   top: 18px; }
-  nav > .link-wrap {
+  nav .link-wrap {
     position: relative;
     top: 16px; }
-    nav > .link-wrap > .link {
+    nav .link-wrap > .link {
       font-size: 3rem; }
-    nav > .link-wrap > .separator {
+    nav .link-wrap > .separator {
       margin-left: 8px;
       margin-right: 8px;
       font-size: 3.4rem;
       opacity: 0.6; }
-  @media (min-width: 768px) {
-    nav header.creator img.logo {
-      width: 142px;
-      height: 142px; } }
+
+@media (min-width: 768px) {
+  header.creator img.logo {
+    width: 142px;
+    height: 142px; } }

@@ -117,52 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CoName" xml:space="preserve">
-    <value>Lundbeck Consulting</value>
+  <data name="Body" xml:space="preserve">
+    <value>&lt;p&gt;
+	Jeg mener noen overpriser produktene de leverer. 
+	&lt;br /&gt;
+	Mange i oppstartsfasen kan få seg en real bakoversveis når tilbudene på hjemmeside kommer. Og enda en bakoversveis når man trenger endringer og ny funksjonalitet.
+&lt;/p&gt;
+&lt;p&gt;
+	Mitt motto er: Alle skal få!
+	&lt;br /&gt;
+	Selv små foretak må på nett. Jeg tilpasser prisen for applikasjonen etter størrelse/type foretak og selvfølgelig innhold og funksjonalitet.
+&lt;/p&gt;
+&lt;p&gt;
+	Når applikasjonen er ferdig hostes den av oss gjennom produktet Serviceavtale.
+	&lt;br /&gt;
+	Dette gir deg knirkefrie dager og du kan være sikker på løsningen din lever et sunt liv.
+&lt;/p&gt;
+&lt;p&gt;
+	&lt;strong&gt;Les mer om Serviceavtalen og hvilke tjenester som er inkludert.&lt;/strong&gt;
+&lt;/p&gt;</value>
   </data>
-  <data name="CoNameShort" xml:space="preserve">
-    <value>LC</value>
-  </data>
-  <data name="CoSlogan" xml:space="preserve">
-    <value>Welcome to no limits</value>
-  </data>
-  <data name="PhraseAboutMe" xml:space="preserve">
-    <value>About Me</value>
-  </data>
-  <data name="PhraseGotoFacebook" xml:space="preserve">
-    <value>Visit us on Facebook</value>
-  </data>
-  <data name="PhraseGotoLinkedIn" xml:space="preserve">
-    <value>Visit us on LinkedIn</value>
-  </data>
-  <data name="WordCall" xml:space="preserve">
-    <value>Call me</value>
-  </data>
-  <data name="WordDesign" xml:space="preserve">
-    <value>Design</value>
-  </data>
-  <data name="WordDevelopment" xml:space="preserve">
-    <value>Development</value>
-  </data>
-  <data name="WordEmail" xml:space="preserve">
-    <value>Email</value>
-  </data>
-  <data name="WordHome" xml:space="preserve">
-    <value>Home</value>
-  </data>
-  <data name="WordHosting" xml:space="preserve">
-    <value>Hosting</value>
-  </data>
-  <data name="WordModel" xml:space="preserve">
-    <value>Model</value>
-  </data>
-  <data name="WordNews" xml:space="preserve">
-    <value>News</value>
-  </data>
-  <data name="WordProjects" xml:space="preserve">
-    <value>Projects</value>
-  </data>
-  <data name="WordVisit" xml:space="preserve">
-    <value>Visit</value>
+  <data name="Title" xml:space="preserve">
+    <value>Min modell - du får mest for pengene</value>
   </data>
 </root>

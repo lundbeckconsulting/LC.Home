@@ -73,7 +73,7 @@ nav {
     position: relative;
     top: 18px;
 
-    & > .link-wrap {
+    & .link-wrap {
         position: relative;
         top: 16px;
 
@@ -88,13 +88,13 @@ nav {
             opacity: 0.6;
         }
     }
+}
 
-    @include media() {
-        header.creator {
-            & img.logo {
-                width: 142px;
-                height: 142px;
-            }
+@include media() {
+    header.creator {
+        & img.logo {
+            width: 142px;
+            height: 142px;
         }
     }
 }

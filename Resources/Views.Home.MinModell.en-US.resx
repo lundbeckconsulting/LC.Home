@@ -117,52 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CoName" xml:space="preserve">
-    <value>Lundbeck Consulting</value>
+  <data name="Body" xml:space="preserve">
+    <value>&lt;p&gt;
+	Some charge way too much for a relatively simple website.
+	&lt;br /&gt;
+	Many startups can't afford big money just to get their project on the web and many end up creating one themselves with varying results.
+	&lt;br /&gt;
+	And it's the same deal if you need changes or new features.
+&lt;/p&gt;
+&lt;p&gt;
+	Our motto: &lt;strong&gt;Everybody needs to be online!&lt;/strong&gt;
+	&lt;br /&gt;
+	Even small companies or startups should be on the internet. I adapt the price after the company size and the nature of the project with content and features.
+&lt;/p&gt;
+&lt;p&gt;
+	When the application is ready for hosting is that covered by a product named &lt;strong&gt;&lt;i&gt;Service Deal&lt;/i&gt;&lt;/strong&gt;.
+	&lt;br /&gt;
+	The Service Deal takes care of everything you need for your application to live a healthy life.
+&lt;/p&gt;
+&lt;p&gt;
+	Read more about the Service Deal and which services it includes.
+&lt;/p&gt;</value>
   </data>
-  <data name="CoNameShort" xml:space="preserve">
-    <value>LC</value>
-  </data>
-  <data name="CoSlogan" xml:space="preserve">
-    <value>Welcome to no limits</value>
-  </data>
-  <data name="PhraseAboutMe" xml:space="preserve">
-    <value>About Me</value>
-  </data>
-  <data name="PhraseGotoFacebook" xml:space="preserve">
-    <value>Visit us on Facebook</value>
-  </data>
-  <data name="PhraseGotoLinkedIn" xml:space="preserve">
-    <value>Visit us on LinkedIn</value>
-  </data>
-  <data name="WordCall" xml:space="preserve">
-    <value>Call me</value>
-  </data>
-  <data name="WordDesign" xml:space="preserve">
-    <value>Design</value>
-  </data>
-  <data name="WordDevelopment" xml:space="preserve">
-    <value>Development</value>
-  </data>
-  <data name="WordEmail" xml:space="preserve">
-    <value>Email</value>
-  </data>
-  <data name="WordHome" xml:space="preserve">
-    <value>Home</value>
-  </data>
-  <data name="WordHosting" xml:space="preserve">
-    <value>Hosting</value>
-  </data>
-  <data name="WordModel" xml:space="preserve">
-    <value>Model</value>
-  </data>
-  <data name="WordNews" xml:space="preserve">
-    <value>News</value>
-  </data>
-  <data name="WordProjects" xml:space="preserve">
-    <value>Projects</value>
-  </data>
-  <data name="WordVisit" xml:space="preserve">
-    <value>Visit</value>
+  <data name="Title" xml:space="preserve">
+    <value>My model - get the most for your money</value>
   </data>
 </root>

@@ -25,7 +25,13 @@
             <a asp-action="OmLundbeckConsulting" class="link">@_sharedLocalizer["PhraseAboutMe"]</a>
         </p>
         <p>
+            <a asp-action="MinModell" class="link">@_sharedLocalizer["WordModel"]</a>
+        </p>
+        <p>
             <a asp-action="MineProsjekter" class="link">@_sharedLocalizer["WordProjects"]</a>
+        </p>
+        <p>
+            <a href="https://www.facebook.com/LundbeckConsulting" class="link"><icon type="Facebook" size="MD" /></a><span class="f-4 mrg-sm">|</span><a href="https://www.linkedin.com/company/16186202" class="link"><icon type="LinkedIn" size="MD" /></a>
         </p>
         <p class="contact">
             <a href="tel:+4792205613" class="link"><icon type="PhoneFull" /> @_sharedLocalizer["WordCall"]</a><span class="separator">|</span><a href="mailto:stein@lundbeckconsulting.no" class="link"><icon type="EnvelopeFull" /> @_sharedLocalizer["WordEmail"]</a>
@@ -44,8 +50,10 @@
                 </div>
                 <div>
                     <nav>
-                        <div class="link-wrap show-sm">
-                            <a asp-action="Index" class="link">@_sharedLocalizer["WordHome"]</a><span class="separator">|</span><a asp-action="OmLundbeckConsulting" class="link">@_sharedLocalizer["PhraseAboutMe"]</a><span class="separator">|</span><a asp-action="MineProsjekter" class="link">@_sharedLocalizer["WordProjects"]</a>
+                        <div class="show-sm">
+                            <div class="link-wrap flex-end-center">
+                                <a asp-action="OmLundbeckConsulting" class="link">@_sharedLocalizer["PhraseAboutMe"]</a><span class="separator">|</span><a asp-action="MinModell" class="link">@_sharedLocalizer["WordModel"]</a><span class="separator">|</span><a asp-action="MineProsjekter" class="link">@_sharedLocalizer["WordProjects"]</a><span class="separator">/</span><a href="https://www.facebook.com/LundbeckConsulting" class="link" title="@_sharedLocalizer["PhraseGotoFacebook"].Value"><icon type="Facebook" size="SM" /></a><span class="separator mrg-sm">-</span><a href="https://www.linkedin.com/company/16186202" class="link" title="@_sharedLocalizer["PhraseGotoLinkedIn"]"><icon type="LinkedIn" size="SM" /></a>
+                            </div>
                         </div>
                         <icon id="barsMenuIcon" type="Bars" size="MD" class="hide-sm" />
                     </nav>
@@ -66,9 +74,9 @@
     </main>
     
     <footer class="creator align-center">
-        <div id="languageSymbols" class="hide">
+        <div id="languageSymbols">
             <a href="https://lundbeckconsulting.no" title="Lundbeck Consulting på Norsk"><img src="/IMAGE/norwegian-circle.png" class="flag" /></a>
-            <a href="https://lundbeckconsulting.com" title="Lundbeck Consulting in English"><img src="/IMAGE/english-circle.png" class="flag" /></a>
+            <a href="http://lundbeckconsulting.com" title="Lundbeck Consulting in English"><img src="/IMAGE/english-circle.png" class="flag" /></a>
         </div>
         <p>
             <a asp-action="Index" title="Copyright">
@@ -76,7 +84,7 @@
             </a>
         </p>
         <p class="flex-center-center">
-            <a asp-action="OmLundbeckConsulting">@_sharedLocalizer["PhraseAboutMe"]</a><span class="separator">|</span><a asp-action="MineProsjekter">@_sharedLocalizer["WordProjects"]</a>
+            <a asp-action="OmLundbeckConsulting">@_sharedLocalizer["PhraseAboutMe"]</a><span class="separator">|</span><a asp-action="MinModell">@_sharedLocalizer["WordModel"]</a><span class="separator">|</span><a asp-action="MineProsjekter">@_sharedLocalizer["WordProjects"]</a><span class="separator">/</span><a href="https://www.facebook.com/LundbeckConsulting" target="_blank" title="@_sharedLocalizer["PhraseGotoFacebook"]"><icon type="Facebook" /></a><span class="separator">-</span><a href="https://www.linkedin.com/company/16186202" target="_blank" title="@_sharedLocalizer["PhraseGotoLinkedIn"]"><icon type="LinkedIn" /></a>
         </p>
         <p class="flex-center-center pad-doc">
             <a href="tel:+4792205613"><icon type="PhoneFull" /> @_sharedLocalizer["WordCall"]</a><span class="separator">|</span><a href="mailto:stein@lundbeckconsulting.no"><icon type="EnvelopeFull" /> @_sharedLocalizer["WordEmail"]</a>

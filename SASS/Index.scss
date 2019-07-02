@@ -1,6 +1,10 @@
 @import "Variables.scss";
 @import "Creator/Media.scss";
 
+img.logo {
+    max-width: 364px;
+}
+
 h2.slogan {
     color: $colorYellow;
     position: relative;
@@ -19,6 +23,10 @@ h3.points {
 }
 
 .links {
+    & > a {
+        font-size: 1.6rem;
+    }
+
     & > .separator {
         font-size: 3.4rem;
         margin-left: 6px;
@@ -41,6 +49,12 @@ h3.points {
 }
 
 @include media() {
+    .links {
+        & > a {
+            font-size: 3.2rem;
+        }
+    }
+
     .event-wrap {
         & > .items {
             & > .item {

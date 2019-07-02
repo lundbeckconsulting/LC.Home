@@ -28,7 +28,7 @@ namespace LC.Home.Blitz
 
         public void Configure(IApplicationBuilder app)
         {
-            app.UseLCAssetsHTTPS(this.Environment);
+            //app.UseLCAssetsHTTPS(this.Environment);
             app.UseLCAssetsDebug(this.Environment);
             app.UseLCAssetsLocalizationFromConfig();
             app.UseLCAssetsSlugify();

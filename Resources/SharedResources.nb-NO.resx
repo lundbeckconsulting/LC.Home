@@ -129,6 +129,12 @@
   <data name="PhraseAboutMe" xml:space="preserve">
     <value>Om Meg</value>
   </data>
+  <data name="PhraseGotoFacebook" xml:space="preserve">
+    <value>Besøk oss på Facebook</value>
+  </data>
+  <data name="PhraseGotoLinkedIn" xml:space="preserve">
+    <value>Besøk oss på LinkedIn</value>
+  </data>
   <data name="WordCall" xml:space="preserve">
     <value>Ring</value>
   </data>
@@ -146,6 +152,9 @@
   </data>
   <data name="WordHosting" xml:space="preserve">
     <value>Drift</value>
+  </data>
+  <data name="WordModel" xml:space="preserve">
+    <value>Modellen</value>
   </data>
   <data name="WordNews" xml:space="preserve">
     <value>Nyheter</value>

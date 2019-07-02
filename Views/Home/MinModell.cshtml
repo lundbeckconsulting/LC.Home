@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = _localizer["Title"];
+    ViewData["Header"] = _localizer["Title"];
+}
+
+@section CSS {
+    <lc:include src="Model.css" />
+}
+
+<section>
+    <div>
+        @_localizer["Body"]
+
+        <ul>
+            <li><a href="/FILE/Serviceavtale.pdf" title="Serviceavtale">Norsk</a></li>
+            <li><a href="/FILE/ServiceDeal.pdf" title="Service Deal">English</a></li>
+        </ul>
+    </div>
+    <div class="align-center">
+        <img src="/IMAGE/Model/the-process.png" class="process illu r" />
+    </div>
+</section>

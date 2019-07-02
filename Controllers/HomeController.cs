@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 
 namespace LC.Home.Blitz.Controllers
@@ -21,6 +16,11 @@ namespace LC.Home.Blitz.Controllers
         }
 
         public IActionResult MineProsjekter()
+        {
+            return View();
+        }
+
+        public IActionResult MinModell()
         {
             return View();
         }
