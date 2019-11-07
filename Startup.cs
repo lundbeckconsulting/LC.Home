@@ -1,5 +1,6 @@
-﻿using LC.Assets.Core.Components.Extensions;
+﻿using Assets.Core.Components.Extensions;
 using LC.Home.Blitz.Data;
+using LC.Home.Blitz.Middle;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -10,7 +11,7 @@ namespace LC.Home.Blitz
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration, IHostingEnvironment environment)
+        public Startup(IConfiguration configuration, IWebHostEnvironment environment)
         {
             this.Configuration = configuration;
             this.Environment = environment;
@@ -20,21 +21,23 @@ namespace LC.Home.Blitz
             services.AddDbContext<LCContext>(opt => opt.UseSqlServer(this.Configuration.GetConnectionString("Default")));
             services.AddTransient<IDataRepo, DataRepo>();
 
-            services.AddLCAssetsSlugify();
-            services.AddLCAssetsConfig();
-			services.AddLCAssetsDBContext();
-            services.AddLCAssetsAndLocalization();
+            services.AddAssetsSlugify();
+            services.AddAssetsConfig();
+            services.AddAssetsDBContext();
+            services.AddAssets(opt => {
+                opt.EnableEndpointRouting = false;
+            }, true);
         }
 
         public void Configure(IApplicationBuilder app)
         {
-            //app.UseLCAssetsHTTPS(this.Environment);
-            app.UseLCAssetsDebug(this.Environment);
-            app.UseLCAssetsLocalizationFromConfig();
-            app.UseLCAssetsSlugify();
+            app.UseAssetsDebug(this.Environment);
+            app.UseAssetsLocalization();
+            app.UseMiddleware<SetCulture>();
+            app.UseAssetsSlugify();
         }
 
         public IConfiguration Configuration { get; }
-        public IHostingEnvironment Environment { get; }
+        public IWebHostEnvironment Environment { get; }
     }
 }

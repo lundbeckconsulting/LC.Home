@@ -119,25 +119,41 @@
   </resheader>
   <data name="Body" xml:space="preserve">
     <value>&lt;p&gt;
-	Jeg mener noen overpriser produktene de leverer. 
-	&lt;br /&gt;
-	Mange i oppstartsfasen kan få seg en real bakoversveis når tilbudene på hjemmeside kommer. Og enda en bakoversveis når man trenger endringer og ny funksjonalitet.
+	Hos meg får du full service fra dag 1. Det inkluderer bla. behovanalyse, definering av kjernefunksjonalitet og grafisk design. 
 &lt;/p&gt;
 &lt;p&gt;
-	Mitt motto er: Alle skal få!
-	&lt;br /&gt;
-	Selv små foretak må på nett. Jeg tilpasser prisen for applikasjonen etter størrelse/type foretak og selvfølgelig innhold og funksjonalitet.
+	Jeg utvikler nettsider med vennlige kontrakter mot at jeg får drifte den når den er ferdig. 
+&lt;br /&gt;
+Det gir også deg som kunde mange fordeler som overvåkning av nettsiden, trafikkrapporter og forutsigbar pris for drift av nettsiden. 
 &lt;/p&gt;
 &lt;p&gt;
-	Når applikasjonen er ferdig hostes den av oss gjennom produktet Serviceavtale.
-	&lt;br /&gt;
-	Dette gir deg knirkefrie dager og du kan være sikker på løsningen din lever et sunt liv.
+Du kan tilogmed få endringer implementert helt gratis! Les mer om drift hos meg i Serviceavtalen,
+&lt;/p&gt;
+&lt;p class="pad-md read-more-wrap"&gt;
+ &lt;a href="/FILE/Serviceavtale.pdf" class="h4 flex-start-center" title="Les om Serviceavtale"&gt;&lt;img src="/image/model/pdf-icon.png" class="pdf-icon" /&gt; &lt;span&gt;Les mer om Serviceavtale&lt;/span&gt;&lt;/a&gt;
+&lt;/ p&gt;</value>
+  </data>
+  <data name="Grunder" xml:space="preserve">
+    <value>&lt;p&gt;
+	Som en gründer selv er jeg stolt av å si jeg er &lt;i&gt;Gründervennlig&lt;/i&gt;.
 &lt;/p&gt;
 &lt;p&gt;
-	&lt;strong&gt;Les mer om Serviceavtalen og hvilke tjenester som er inkludert.&lt;/strong&gt;
+	Hvis du har riktig prosjekt så har du også riktig mann som er med fra planlegging til drift. 
+&lt;/p&gt;
+&lt;p&gt;
+Ta gjerne kontakt og fortell om ditt prosjekt. Hvis du velger å engasjere meg er det fordelaktig for begge parter at jeg kommer inn tidlig i planleggingfasen. &lt;strong&gt;Jo tidligere - jo mer kan jeg bidra med&lt;/strong&gt;.
 &lt;/p&gt;</value>
   </data>
+  <data name="GrunderHeader" xml:space="preserve">
+    <value>Gründervennlig</value>
+  </data>
+  <data name="ServiceDealLanguage" xml:space="preserve">
+    <value>Norsk</value>
+  </data>
+  <data name="TheProcessPath" xml:space="preserve">
+    <value>/IMAGE/Model/the-process.jpg</value>
+  </data>
   <data name="Title" xml:space="preserve">
-    <value>Min modell - du får mest for pengene</value>
+    <value>Min Modell - dekker alt du trenger</value>
   </data>
 </root>

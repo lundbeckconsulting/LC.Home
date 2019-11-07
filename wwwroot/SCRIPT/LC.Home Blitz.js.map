@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["LC.Home Blitz.js"],"sourcesContent":["$(\"#bars-wrap > .icon\").click(function() {\r\n  $(\"#burgerMenu\").toggle(\"slow\");\r\n});\r\n\r\n$(\"#burgerMenu\").click(function() {\r\n  $(\"#burgerMenu\").toggle(\"slow\");\r\n});\r\n\r\n\r\n//# sourceMappingURL=LC.Home Blitz.js.map\r\n"],"file":"LC.Home Blitz.js"}

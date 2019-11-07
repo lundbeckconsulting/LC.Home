@@ -1,4 +1,4 @@
-﻿using LC.Assets;
+﻿using Assets.Components;
 using System.Collections.Generic;
 
 namespace LC.Home.Blitz.Data.Models
@@ -21,7 +21,7 @@ namespace LC.Home.Blitz.Data.Models
         public string URL { get; set; }
         public string GitHubURL { get; set; }
         public int OrderBy { get; set; }
-        public string Culture { get; set; } = Const.LocalizationDefaultCultureCode;
+        public string Culture { get; set; } = Statics.LocalizationDefaultCultureString;
         public virtual IEnumerable<ProjectImage> Images { get; set; } = new HashSet<ProjectImage>();
     }
 }

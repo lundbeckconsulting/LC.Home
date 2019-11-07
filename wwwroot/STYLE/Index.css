@@ -1,0 +1,46 @@
+img.logo {
+  max-width: 364px; }
+
+h2.slogan {
+  color: #b19915;
+  position: relative;
+  top: -18px;
+  font-size: 1.8rem; }
+
+h3.points {
+  color: #2c78b5;
+  position: relative;
+  top: -30px;
+  font-size: 2rem; }
+  h3.points > .separator {
+    margin-left: 6px;
+    margin-right: 6px; }
+
+.links > a {
+  font-size: 1.6rem; }
+
+.links > .separator {
+  font-size: 3.4rem;
+  margin-left: 6px;
+  margin-right: 6px;
+  position: relative;
+  top: -4px;
+  opacity: 0.6; }
+
+.event-wrap {
+  max-width: 1226px; }
+  .event-wrap > .items > .item {
+    margin-top: 46px;
+    display: block; }
+
+@media (min-width: 768px) {
+  h2.slogan {
+    font-size: 2.8rem; }
+  h3.points {
+    font-size: 3.8rem; }
+  .links > a {
+    font-size: 3rem; }
+  .links > .separator {
+    font-size: 4.4rem; } }
+
+/*# sourceMappingURL=Index.css.map */

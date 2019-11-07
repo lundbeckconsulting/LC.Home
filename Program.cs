@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore;
+﻿using Assets.Core.Components.Extensions;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
 namespace LC.Home.Blitz
@@ -9,7 +10,6 @@ namespace LC.Home.Blitz
         {
             CreateWebHostBuilder(args).Build().Run();
         }
-
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseIIS()

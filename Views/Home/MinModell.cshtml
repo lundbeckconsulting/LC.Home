@@ -3,20 +3,28 @@
     ViewData["Header"] = _localizer["Title"];
 }
 
-@section CSS {
-    <lc:include src="Model.css" />
+@section STYLE {
+    <asset path="Model.css" />
 }
 
 <section>
     <div>
         @_localizer["Body"]
-
-        <ul>
-            <li><a href="/FILE/Serviceavtale.pdf" title="Serviceavtale">Norsk</a></li>
-            <li><a href="/FILE/ServiceDeal.pdf" title="Service Deal">English</a></li>
-        </ul>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="pad-computer-xl-top">
+                <h1>@_localizer["GrunderHeader"]</h1>
+                @_localizer["Grunder"]
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="device-tablet-screen">
+                <asset path="Model/service-deal-illu.jpg" class="r" />
+            </div>
+        </div>
     </div>
     <div class="align-center">
-        <img src="/IMAGE/Model/the-process.png" class="process illu r" />
+        <img src="@_localizer["TheProcessPath"]" class="process illu r" />
     </div>
 </section>

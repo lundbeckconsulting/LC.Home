@@ -1,23 +1,25 @@
 ﻿<!DOCTYPE html>
 <html class="creator">
 <head>
-    <lc:include type="GoogleAnalyctics" />
+    <asset type="GoogleAnalytics" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <lc:include type="Meta" />
-	<lc:include type="MetaLayout" />
     @await RenderSectionAsync("META", false)
 
     <title>@ViewData["Title"] - Lundbeck Consulting</title>
-    <lc:include type="FavIcon" />
+    <asset type="FavIcon" />
 
-    <lc:include type="FontAwesome" />
-    <lc:include type="CreatorCSS" min="true" />
-	<lc:include src="Layout.css" />
-    @await RenderSectionAsync("CSS", false)
+    <asset type="FontAwesome" />
+    <asset type="CreatorStyle" />
+	<asset path="Layout.css" />
+
+    @await RenderSectionAsync("STYLE", false)
 </head>
 <body class="creator">
     <div id="burgerMenu" class="hide align-center">
+        <div class="align-right close-wrap">
+            <icon type="Close" size="MD" no-title="true" />
+        </div>
         <p>
             <a asp-action="Index" class="link">@_sharedLocalizer["WordHome"]</a>
         </p>
@@ -30,19 +32,19 @@
         <p>
             <a asp-action="MineProsjekter" class="link">@_sharedLocalizer["WordProjects"]</a>
         </p>
+            <a href="https://www.facebook.com/LundbeckConsulting" class="link"><icon type="FacebookLogo" size="MD" /></a><span class="f-4 mrg-sm">|</span><a href="https://www.linkedin.com/company/16186202" class="link"><icon type="LinkedInLogoSquare" size="MD" /></a>
         <p>
-            <a href="https://www.facebook.com/LundbeckConsulting" class="link"><icon type="Facebook" size="MD" /></a><span class="f-4 mrg-sm">|</span><a href="https://www.linkedin.com/company/16186202" class="link"><icon type="LinkedIn" size="MD" /></a>
         </p>
         <p class="contact">
             <a href="tel:+4792205613" class="link"><icon type="PhoneFull" /> @_sharedLocalizer["WordCall"]</a><span class="separator">|</span><a href="mailto:stein@lundbeckconsulting.no" class="link"><icon type="EnvelopeFull" /> @_sharedLocalizer["WordEmail"]</a>
         </p>
     </div>
 
-	@if (!_siteHelper.IsIndex)
+	@if (!_sitesRepo.IsIndex())
     {
         <header class="creator">
             <div class="inner flex-space-between">
-                <div>
+                <div class="device-tablet-screen">
                     <a asp-action="Index" class="flex-center-center">
                         <img src="/IMAGE/logo.png" class="logo" alt="Logo" title="Logo" />
                         <h1 class="h2 show-md">@_sharedLocalizer["CoName"]</h1>
@@ -50,12 +52,25 @@
                 </div>
                 <div>
                     <nav>
-                        <div class="show-sm">
+                        <div class="device-tablet-screen">
                             <div class="link-wrap flex-end-center">
-                                <a asp-action="OmLundbeckConsulting" class="link">@_sharedLocalizer["PhraseAboutMe"]</a><span class="separator">|</span><a asp-action="MinModell" class="link">@_sharedLocalizer["WordModel"]</a><span class="separator">|</span><a asp-action="MineProsjekter" class="link">@_sharedLocalizer["WordProjects"]</a><span class="separator">/</span><a href="https://www.facebook.com/LundbeckConsulting" class="link" title="@_sharedLocalizer["PhraseGotoFacebook"].Value"><icon type="Facebook" size="SM" /></a><span class="separator mrg-sm">-</span><a href="https://www.linkedin.com/company/16186202" class="link" title="@_sharedLocalizer["PhraseGotoLinkedIn"]"><icon type="LinkedIn" size="SM" /></a>
+                                <a asp-action="OmLundbeckConsulting" class="link">@_sharedLocalizer["PhraseAboutMe"]</a><span class="separator">|</span><a asp-action="MinModell" class="link">@_sharedLocalizer["WordModel"]</a><span class="separator">|</span><a asp-action="MineProsjekter" class="link">@_sharedLocalizer["WordProjects"]</a><span class="separator">/</span><a href="https://www.facebook.com/LundbeckConsulting" class="link" title="@_sharedLocalizer["PhraseGotoFacebook"].Value"><icon type="FacebookLogo" size="SM" /></a><span class="separator mrg-sm">-</span><a href="https://www.linkedin.com/company/16186202" class="link" title="@_sharedLocalizer["PhraseGotoLinkedIn"]"><icon type="LinkedInLogoSquare" size="SM" /></a>
                             </div>
                         </div>
-                        <icon id="barsMenuIcon" type="Bars" size="MD" class="hide-sm" />
+                        <div class="device-phone">
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <a asp-action="Index">
+                                        <img src="/IMAGE/logo.png" class="logo r" />
+                                    </a>
+                                </div>
+                                <div class="col-xs-2 align-right">
+                                    <div id="bars-wrap" class="device-phone">
+                                        <icon id="barsMenuIcon" type="Bars" size="MD" no-title="true" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </nav>
                 </div>
             </div>
@@ -65,9 +80,9 @@
     <main role="main" class="creator">
         @if (ViewData.ContainsKey("Header"))
         {
-            <div class="header">
-                <h1 class="h2 h1-lg bold">@ViewData["Header"]</h1>
-            </div>
+            <header class="header-wrap">
+                <h1>@ViewData["Header"]</h1>
+            </header>
         }
 
         @RenderBody()
@@ -84,7 +99,7 @@
             </a>
         </p>
         <p class="flex-center-center">
-            <a asp-action="OmLundbeckConsulting">@_sharedLocalizer["PhraseAboutMe"]</a><span class="separator">|</span><a asp-action="MinModell">@_sharedLocalizer["WordModel"]</a><span class="separator">|</span><a asp-action="MineProsjekter">@_sharedLocalizer["WordProjects"]</a><span class="separator">/</span><a href="https://www.facebook.com/LundbeckConsulting" target="_blank" title="@_sharedLocalizer["PhraseGotoFacebook"]"><icon type="Facebook" /></a><span class="separator">-</span><a href="https://www.linkedin.com/company/16186202" target="_blank" title="@_sharedLocalizer["PhraseGotoLinkedIn"]"><icon type="LinkedIn" /></a>
+            <a asp-action="OmLundbeckConsulting">@_sharedLocalizer["PhraseAboutMe"]</a><span class="separator">|</span><a asp-action="MinModell">@_sharedLocalizer["WordModel"]</a><span class="separator">|</span><a asp-action="MineProsjekter">@_sharedLocalizer["WordProjects"]</a><span class="separator">/</span><a href="https://www.facebook.com/LundbeckConsulting" target="_blank" title="@_sharedLocalizer["PhraseGotoFacebook"]"><icon type="FacebookLogo" /></a><span class="separator">-</span><a href="https://www.linkedin.com/company/16186202" target="_blank" title="@_sharedLocalizer["PhraseGotoLinkedIn"]"><icon type="LinkedInLogoSquare" /></a>
         </p>
         <p class="flex-center-center pad-doc">
             <a href="tel:+4792205613"><icon type="PhoneFull" /> @_sharedLocalizer["WordCall"]</a><span class="separator">|</span><a href="mailto:stein@lundbeckconsulting.no"><icon type="EnvelopeFull" /> @_sharedLocalizer["WordEmail"]</a>
@@ -94,9 +109,8 @@
         </p> 
     </footer>
 
-    <lc:include type="jQuery" />
-    <lc:include type="CreatorJS" min="true" />
-    <lc:include src="Layout.js" />
+    <asset type="jQuery" />
+    <asset path="Layout.js" />
 
     @await RenderSectionAsync("SCRIPT", required: false)
 </body>

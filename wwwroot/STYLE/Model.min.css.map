@@ -1,0 +1,1 @@
+{"version":3,"sources":["_GENERATED/_Model.scss"],"names":[],"mappings":"AAAA,cACI,UAAW,OAGf,0BAEQ,MAAO","file":"Model.min.css","sourcesContent":[".process.illu {\r\n    max-width: 1051px;\r\n}\r\n\r\n.read-more-wrap {\r\n    & .pdf-icon {\r\n        width: 124px;\r\n    }\r\n}\r\n"]}

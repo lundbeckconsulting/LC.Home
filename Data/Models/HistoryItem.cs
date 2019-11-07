@@ -1,4 +1,4 @@
-﻿using LC.Assets;
+﻿using Assets.Components;
 
 namespace LC.Home.Blitz.Data.Models
 {
@@ -15,6 +15,6 @@ namespace LC.Home.Blitz.Data.Models
         public string Header { get; set; }
         public string Description { get; set; }
         public string URL { get; set; }
-        public string Culture { get; set; } = Const.LocalizationDefaultCultureCode;
+        public string Culture { get; set; } = Statics.LocalizationDefaultCultureString;
     }
 }

@@ -119,27 +119,41 @@
   </resheader>
   <data name="Body" xml:space="preserve">
     <value>&lt;p&gt;
-	Some charge way too much for a relatively simple website.
-	&lt;br /&gt;
-	Many startups can't afford big money just to get their project on the web and many end up creating one themselves with varying results.
-	&lt;br /&gt;
-	And it's the same deal if you need changes or new features.
-&lt;/p&gt;
+	I intend to offer you full service from day 1. That includes, among other things: needs analysis, definition of core functionality and graphic design.
+&lt;/ p&gt;
 &lt;p&gt;
-	Our motto: &lt;strong&gt;Everybody needs to be online!&lt;/strong&gt;
+	I develop websites with friendly contracts, in exchange I get to host the finished web site.
 	&lt;br /&gt;
-	Even small companies or startups should be on the internet. I adapt the price after the company size and the nature of the project with content and features.
-&lt;/p&gt;
+	This gives you as a customer many benefits such as monitoring the website, traffic reports and predictable price for operating the website.
+&lt;/ p&gt;
 &lt;p&gt;
-	When the application is ready for hosting is that covered by a product named &lt;strong&gt;&lt;i&gt;Service Deal&lt;/i&gt;&lt;/strong&gt;.
-	&lt;br /&gt;
-	The Service Deal takes care of everything you need for your application to live a healthy life.
-&lt;/p&gt;
-&lt;p&gt;
-	Read more about the Service Deal and which services it includes.
-&lt;/p&gt;</value>
+	You can even get changes implemented for free! Read more about the hosting services I offer in the Service Deal,
+&lt;/ p&gt;
+&lt;p class="pad-md read-more-wrap"&gt;
+ &lt;a href="/FILE/Service-Deal.pdf" class="h4 flex-start-center" title="Read about Service Deal"&gt;&lt;img src="/image/model/pdf-icon.png" class="pdf-icon" /&gt; &lt;span&gt;Read more about Service Deal&lt;/span&gt;&lt;/a&gt;
+&lt;/ p&gt;</value>
   </data>
-  <data name="Title" xml:space="preserve">
-    <value>My model - get the most for your money</value>
+  <data name="Grunder" xml:space="preserve">
+    <value>&lt;p&gt;
+	As a Startup myself, I am proud to say I am &lt;i&gt;Startup friendly &lt;/i&gt;.
+&lt;/ p&gt;
+&lt;p&gt;
+	If you have the right project then you also have the right partner that can be involved in planning and defining core features.
+&lt;/ p&gt;
+&lt;p&gt;
+	Feel free to contact me and present your project. If you choose to involve me, it is beneficial for both parties that I get in early in the planning phase. &lt;strong&gt;The earlier - the more I can contribute&lt;/strong&gt;.
+&lt;/ p&gt;</value>
+  </data>
+  <data name="GrunderHeader" xml:space="preserve">
+    <value>Startup friendly</value>
+  </data>
+  <data name="ServiceDealLanguage" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="TheProcessPath" xml:space="preserve">
+    <value>/IMAGE/Model/the-process-english.jpg</value>
+  </data>
+  <data name="Title1" xml:space="preserve">
+    <value>My Model - everything you need</value>
   </data>
 </root>

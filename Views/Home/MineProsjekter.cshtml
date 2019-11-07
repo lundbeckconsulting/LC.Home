@@ -1,17 +1,17 @@
 ﻿@using LC.Home.Blitz.Data.Models;
-@using LC.Assets.Components.Extensions;
+@using Assets.Components.Extensions;
 
 @{
     ViewData["Title"] = _localizer["Title"];
     ViewData["Header"] = _localizer["Title"];
 }
 
-@section CSS {
-    <lc:include src="Project.css" />
+@section STYLE {
+    <asset path="Project.css" />
 }
 
 <div class="items">
-    @foreach (Project project in await _data.GetProjects(_siteHelper.CurrentCulture.ToString()))
+    @foreach (Project project in await _data.GetProjects(_sitesRepo.CurrentCulture.ToString()))
     {
         <div class="item">
             <div class="row">
