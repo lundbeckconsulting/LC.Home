@@ -1,0 +1,236 @@
+﻿@import "./Creator/_Media";
+@import "./Settings";
+
+body {
+    font-family: 'Noto Sans';
+    background: linear-gradient(#75a6ea, #16407c) fixed;
+}
+
+#topSpacer {
+    height: 60px;
+    display: none;
+}
+
+#brandName {
+    font-family: 'Cuprum', cursive;
+    font-size: 2.8rem;
+    color: $mainColor;
+    margin: 0;
+    position: relative;
+    top: 12px;
+}
+
+#brandSlogan {
+    font-size: 1.7rem;
+    position: relative;
+    color: $subColor;
+    top: 10px;
+}
+
+#brandLogo {
+    width: 68px;
+    height: 68px;
+    position: relative;
+    left: -12px;
+}
+
+#brandWrap {
+    width: 100%;
+    position: relative;
+}
+
+#headerSection {
+    width: 100%;
+
+    & .content {
+        width: 100%;
+        background-color: #E6F2FF;
+        background-image: url("/IMAGE/leaf-pattern-blue-shades.png");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 184px;
+        margin-left: 12px;
+    }
+}
+
+#topMenuWrap {
+    border-radius: $contentBoxCornerRadius;
+    border: 3px solid $mainColor;
+    padding: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: #d5deea;
+    width: 104px;
+    position: relative;
+    top: -2px;
+    left: -4px;
+
+    & > a.email {
+        font-size: 2rem;
+        color: $mainColor;
+
+        &:hover {
+            color: rgba($mainColor, 0.8);
+        }
+    }
+
+    & > span.separator {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    & > div.lang-wrap {
+        position: relative;
+        top: 2px;
+
+        & > a.lang.norwegian {
+            margin-right: 14px;
+        }
+
+        & img.flag {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+main.creator {
+    position: relative;
+}
+
+.box {
+    border-radius: 0px;
+}
+
+hr.footer-line {
+    width: 78%;
+}
+
+footer {
+    $separatorMargin: 6px;
+
+    background-color: rgba(#bad0ee, 0.8);
+
+    & > div {
+        padding: 8px;
+    }
+
+    & > .copy {
+        font-size: 1.4rem;
+    }
+
+    & > .actions {
+        & .email {
+            color: black;
+        }
+
+        & > .separator {
+            margin-left: $separatorMargin;
+            margin-right: $separatorMargin;
+        }
+
+        & > .lang-wrap > .lang {
+            &.norwegian {
+                margin-right: 6px;
+            }
+
+            & > .flag {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    & > .social-links {
+        & > .separator {
+            margin-left: $separatorMargin;
+            margin-right: $separatorMargin;
+        }
+    }
+}
+
+@include media(MD) {
+    #topSpacer {
+        display: block;
+    }
+
+    body {
+        background: url("/IMAGE/BACKGROUND/mountain-blue-shade.jpg") no-repeat center fixed;
+        background-size: cover;
+    }
+
+    #headerSection {
+        & .content {
+            width: 76%;
+        }
+    }
+
+    #brandName {
+        font-size: 4.8rem;
+        top: 20px;
+    }
+
+    #brandSlogan {
+        font-size: 2.8rem;
+        top: 26px;
+    }
+
+    #brandLogo {
+        width: 142px;
+        height: 142px;
+        left: -28px;
+    }
+
+    #brandWrap {
+        left: -48px;
+    }
+
+    #topMenuWrap {
+        width: 130px;
+        top: -10px;
+        left: -14px;
+
+        & > a.email {
+            font-size: 3rem;
+            color: $mainColor;
+
+            &:hover {
+                color: rgba($mainColor, 0.8);
+            }
+        }
+
+        & > span.separator {
+            font-size: 2.6rem;
+            font-weight: bold;
+            margin-left: 6px;
+            margin-right: 6px;
+        }
+
+        & > div.lang-wrap {
+            position: relative;
+            top: 2px;
+
+            & > a.lang.norwegian {
+                margin-right: 6px;
+            }
+
+            & img.flag {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    footer.creator {
+        & .company-info-link {
+            font-size: 2rem;
+            margin-left: 4px;
+        }
+    }
+
+    .box {
+        border-radius: $contentBoxCornerRadius;
+    }
+}

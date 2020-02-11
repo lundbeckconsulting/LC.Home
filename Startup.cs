@@ -1,43 +1,52 @@
-﻿using Assets.Core.Components.Extensions;
-using LC.Home.Blitz.Data;
-using LC.Home.Blitz.Middle;
+/*
+    @Date			: 29.01.2020
+    @Author         : Stein Lundbeck
+*/
+
+using LC.Assets.Core.Components;
+using LC.Assets.Core.Components.Extensions;
+using LC.Home.Chicken.Middle;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace LC.Home.Blitz
+namespace LC.Home.Chicken
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration, IWebHostEnvironment environment)
+        public Startup(IConfiguration configuration)
         {
             this.Configuration = configuration;
-            this.Environment = environment;
+
+            this.Configuration.GetValue<string>("Chicken:Culture");
         }
+
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<LCContext>(opt => opt.UseSqlServer(this.Configuration.GetConnectionString("Default")));
-            services.AddTransient<IDataRepo, DataRepo>();
-
-            services.AddAssetsSlugify();
-            services.AddAssetsConfig();
-            services.AddAssetsDBContext();
-            services.AddAssets(opt => {
-                opt.EnableEndpointRouting = false;
+            services.Configure<IConfiguration>(this.Configuration);
+            services.AddAssetsIdentity();
+            services.AddAssetsRepos(new string[] { RepoServiceTypes.Identity });
+            services.AddAssetsHTTPS();
+            services.AddAssets(end => {
+                end.EnableEndpointRouting = false;
             }, true);
         }
 
-        public void Configure(IApplicationBuilder app)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseAssetsDebug(this.Environment);
+            app.UseRewriter(
+                new RewriteOptions()
+                .Add(new CultureRedirect()));
+
+            app.UseAssetsDebug(env);
+            app.UseAssetsHTTPS();
             app.UseAssetsLocalization();
             app.UseMiddleware<SetCulture>();
-            app.UseAssetsSlugify();
+            app.UseAssets(default, true);
         }
 
         public IConfiguration Configuration { get; }
-        public IWebHostEnvironment Environment { get; }
     }
 }

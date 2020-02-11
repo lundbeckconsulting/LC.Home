@@ -1,1 +1,0 @@
-{"version":3,"file":"Variables.css","sources":["Variables.scss","_GENERATED/_Variables.scss"],"sourcesContent":["@import \"_GENERATED//_Variables\";","$colorMain: #05233b;\r\n$colorLight: #cdddea;\r\n$colorBabyBlue: #2c78b5;\r\n$colorYellow: #b19915;\r\n$colorContent: lighten($colorBabyBlue, 38%);"],"names":[],"mappings":""}

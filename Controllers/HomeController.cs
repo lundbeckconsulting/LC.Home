@@ -1,26 +1,23 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿/*
+    @Date			: 29.01.2020
+    @Author         : Stein Lundbeck
+*/
 
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
-namespace LC.Home.Blitz.Controllers
+namespace LC.Home.Chicken.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ILogger<HomeController> _logger;
+
+        public HomeController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
+        }
+
         public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult OmLundbeckConsulting()
-        {
-            return View();
-        }
-
-        public IActionResult MineProsjekter()
-        {
-            return View();
-        }
-
-        public IActionResult MinModell()
         {
             return View();
         }

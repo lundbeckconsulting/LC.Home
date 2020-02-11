@@ -1,117 +1,74 @@
-﻿<!DOCTYPE html>
-<html class="creator">
+﻿@using Microsoft.Extensions.Configuration;
+
+<!DOCTYPE html>
+<html lang="@System.Threading.Thread.CurrentThread.CurrentCulture.Name" class="creator">
 <head>
     <asset type="GoogleAnalytics" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    @await RenderSectionAsync("META", false)
+    <title>Lundbeck Consulting / @ViewData["Title"]</title>
 
-    <title>@ViewData["Title"] - Lundbeck Consulting</title>
-    <asset type="FavIcon" />
-
-    <asset type="FontAwesome" />
     <asset type="CreatorStyle" />
-	<asset path="Layout.css" />
+    <asset type="FontAwesomeScript" />
+    <asset type="GoogleFonts" fonts="Cuprum, Noto Sans" />
+    <asset path="Layout.css" />
 
     @await RenderSectionAsync("STYLE", false)
 </head>
-<body class="creator">
-    <div id="burgerMenu" class="hide align-center">
-        <div class="align-right close-wrap">
-            <icon type="Close" size="MD" no-title="true" />
-        </div>
-        <p>
-            <a asp-action="Index" class="link">@_sharedLocalizer["WordHome"]</a>
-        </p>
-        <p>
-            <a asp-action="OmLundbeckConsulting" class="link">@_sharedLocalizer["PhraseAboutMe"]</a>
-        </p>
-        <p>
-            <a asp-action="MinModell" class="link">@_sharedLocalizer["WordModel"]</a>
-        </p>
-        <p>
-            <a asp-action="MineProsjekter" class="link">@_sharedLocalizer["WordProjects"]</a>
-        </p>
-            <a href="https://www.facebook.com/LundbeckConsulting" class="link"><icon type="FacebookLogo" size="MD" /></a><span class="f-4 mrg-sm">|</span><a href="https://www.linkedin.com/company/16186202" class="link"><icon type="LinkedInLogoSquare" size="MD" /></a>
-        <p>
-        </p>
-        <p class="contact">
-            <a href="tel:+4792205613" class="link"><icon type="PhoneFull" /> @_sharedLocalizer["WordCall"]</a><span class="separator">|</span><a href="mailto:stein@lundbeckconsulting.no" class="link"><icon type="EnvelopeFull" /> @_sharedLocalizer["WordEmail"]</a>
-        </p>
-    </div>
-
-	@if (!_sitesRepo.IsIndex())
-    {
-        <header class="creator">
-            <div class="inner flex-space-between">
-                <div class="device-tablet-screen">
-                    <a asp-action="Index" class="flex-center-center">
-                        <img src="/IMAGE/logo.png" class="logo" alt="Logo" title="Logo" />
-                        <h1 class="h2 show-md">@_sharedLocalizer["CoName"]</h1>
-                    </a>
-                </div>
-                <div>
-                    <nav>
-                        <div class="device-tablet-screen">
-                            <div class="link-wrap flex-end-center">
-                                <a asp-action="OmLundbeckConsulting" class="link">@_sharedLocalizer["PhraseAboutMe"]</a><span class="separator">|</span><a asp-action="MinModell" class="link">@_sharedLocalizer["WordModel"]</a><span class="separator">|</span><a asp-action="MineProsjekter" class="link">@_sharedLocalizer["WordProjects"]</a><span class="separator">/</span><a href="https://www.facebook.com/LundbeckConsulting" class="link" title="@_sharedLocalizer["PhraseGotoFacebook"].Value"><icon type="FacebookLogo" size="SM" /></a><span class="separator mrg-sm">-</span><a href="https://www.linkedin.com/company/16186202" class="link" title="@_sharedLocalizer["PhraseGotoLinkedIn"]"><icon type="LinkedInLogoSquare" size="SM" /></a>
-                            </div>
-                        </div>
-                        <div class="device-phone">
-                            <div class="row">
-                                <div class="col-xs-10">
-                                    <a asp-action="Index">
-                                        <img src="/IMAGE/logo.png" class="logo r" />
-                                    </a>
-                                </div>
-                                <div class="col-xs-2 align-right">
-                                    <div id="bars-wrap" class="device-phone">
-                                        <icon id="barsMenuIcon" type="Bars" size="MD" no-title="true" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
+<body class="creator-no-pad-cover creator-md">
+    <div id="topSpacer"></div>
+    <header id="headerSection" class="creator">
+        <div class="flex-end">
+            <div class="content">
+                <div class="inner flex">
+                    <img id="brandLogo" src="/IMAGE/lc-logo.png" alt="lundbeck consulting logo" title="Lundbeck Consulting logo" />
+                    <div id="brandWrap" class="align-center">
+                        <h1 id="brandName">Lundbeck Consulting</h1>
+                        <span id="brandSlogan" class="block">@_localizer["BrandSlogan"]</span>
+                    </div>
                 </div>
             </div>
-        </header>
-    }
-
-    <main role="main" class="creator">
-        @if (ViewData.ContainsKey("Header"))
-        {
-            <header class="header-wrap">
-                <h1>@ViewData["Header"]</h1>
-            </header>
-        }
-
+        </div>
+        <div class="flex-end">
+            <div id="topMenuWrap" class="flex-center">
+                <asset class="email" icon="EnvelopeFull" title="@_localizer["PhraseSendEmail"].Value" icon-text-hide="true" icon-format="Anchor" href="mailto:lc@lundbeckconsulting.no" />
+                <span class="separator">/</span>
+                <div class="flex-center-center lang-wrap">
+                    <a href="/?lang=nb-NO" class="lang norwegian"><img src="/IMAGE/flag-norwegian.png" class="flag" title="Norsk" alt="Norwegian flag" /></a>
+                    <a href="/?lang=en-US" class="lang english"><img src="/IMAGE/flag-english.png" class="flag" title="English" alt="English flag" /></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main role="main" class="creator main">
         @RenderBody()
     </main>
-    
+
+    <hr class="footer-line" />
     <footer class="creator align-center">
-        <div id="languageSymbols">
-            <a href="https://lundbeckconsulting.no" title="Lundbeck Consulting på Norsk"><img src="/IMAGE/norwegian-circle.png" class="flag" /></a>
-            <a href="http://lundbeckconsulting.com" title="Lundbeck Consulting in English"><img src="/IMAGE/english-circle.png" class="flag" /></a>
+        <div class="copy flex-center-center">
+            <span>&copy; 2020 / Lundbeck Consulting - </span>
+            <asset icon="BuildingFull" href="https://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=984193483" class="company-info-link" title="@_localizer["WordCompanyRegistrationNumberTitle"].Value" target="_blank" icon-text-hide="true" icon-format="Anchor" />
         </div>
-        <p>
-            <a asp-action="Index" title="Copyright">
-                &copy; 2019 / Lundbeck Consulting
-            </a>
-        </p>
-        <p class="flex-center-center">
-            <a asp-action="OmLundbeckConsulting">@_sharedLocalizer["PhraseAboutMe"]</a><span class="separator">|</span><a asp-action="MinModell">@_sharedLocalizer["WordModel"]</a><span class="separator">|</span><a asp-action="MineProsjekter">@_sharedLocalizer["WordProjects"]</a><span class="separator">/</span><a href="https://www.facebook.com/LundbeckConsulting" target="_blank" title="@_sharedLocalizer["PhraseGotoFacebook"]"><icon type="FacebookLogo" /></a><span class="separator">-</span><a href="https://www.linkedin.com/company/16186202" target="_blank" title="@_sharedLocalizer["PhraseGotoLinkedIn"]"><icon type="LinkedInLogoSquare" /></a>
-        </p>
-        <p class="flex-center-center pad-doc">
-            <a href="tel:+4792205613"><icon type="PhoneFull" /> @_sharedLocalizer["WordCall"]</a><span class="separator">|</span><a href="mailto:stein@lundbeckconsulting.no"><icon type="EnvelopeFull" /> @_sharedLocalizer["WordEmail"]</a>
-        </p>
-        <p>
-            <a href="https://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=984193483" target="_blank"><icon type="Building" /> Org.nr 984 193 483</a>
-        </p> 
+        <div class="actions flex-center">
+            <asset class="email" icon="EnvelopeFull" title="@_localizer["PhraseSendEmail"].Value" icon-text-hide="true" icon-format="Anchor" href="mailto:lc@lundbeckconsulting.no" />
+            <span class="separator">/</span>
+            <div class="flex-center-center lang-wrap">
+                <a href="/?lang=nb-NO" class="lang norwegian"><img src="/IMAGE/flag-norwegian.png" class="flag" title="Norsk" alt="Norwegian flag" /></a>
+                <a href="/?lang=en-US" class="lang english"><img src="/IMAGE/flag-english.png" class="flag" title="English" alt="English flag" /></a>
+            </div>
+        </div>
+        <div class="social-links flex-center">
+            <asset icon="FacebookLogoSquare" title="Facebook" href="https://www.facebook.com/LundbeckConsulting" icon-format="Anchor" icon-text-hide="true" />
+            <span class="separator">|</span>
+            <asset icon="LinkedInLogoSquare" title="LinkedIn" href="https://www.linkedin.com/company/lundbeck-consulting" icon-format="Anchor" icon-text-hide="true" />
+            <span class="separator">|</span>
+            <asset icon="GitHub" title="GitHub" href="https://github.com/orgs/lundbeckconsulting" icon-format="Anchor" icon-text-hide="true" />
+        </div>
     </footer>
 
     <asset type="jQuery" />
-    <asset path="Layout.js" />
 
-    @await RenderSectionAsync("SCRIPT", required: false)
+    @await RenderSectionAsync("SCRIPT", false)
 </body>
 </html>

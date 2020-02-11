@@ -1,1 +1,0 @@
-{"version":3,"sources":["_GENERATED/_Project.scss"],"names":[],"mappings":"AAAA,aAEQ,WAAY,KAFpB,oBAKY,YAAa,KACb,aAAc","file":"Project.min.css","sourcesContent":[".items {\r\n    & > .item {\r\n        margin-top: 52px;\r\n\r\n        & .links {\r\n            padding-top: 28px;\r\n            padding-left: 16px;\r\n        }\r\n    }\r\n}\r\n"]}

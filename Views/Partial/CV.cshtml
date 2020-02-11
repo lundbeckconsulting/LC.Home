@@ -1,0 +1,106 @@
+﻿@using LC.Home.Chicken.Models;
+
+<article id="CV">
+    <div class="align-right">
+        <asset icon="CloseFull" class="close-cv" icon-format="Anchor" href="#" icon-text-hide="true" icon-size="LG" icon-color="Danger" />
+    </div>
+    <header class="align-center">
+        <h1>Curriculum Vitae</h1>
+    </header>
+    <section>
+        Stein Lundbeck
+        <br />
+        Engsmyr Terrasse 1
+        <br />
+        1739 Borgenhaugen
+        <br />
+        Sarpsborg
+        <br />
+        Norway
+
+        <p>
+            @_localizer["WordBorn"]: 17.01.1982
+        </p>
+        <p>
+            <a href="mailto:stein.lundbeck@gmail.com">stein.lundbeck@gmail.com</a>
+            <br />
+            <a href="https://lundbeckconsulting.no" target="_blank">http://lundbeckconsulting.no</a>
+        </p>
+    </section>
+    <section class="experience">
+        <h2>@_localizer["WordExperience"]</h2>
+        <p>
+            <table class="content">
+                <tr>
+                    <td class="period"><strong>@_localizer["WordPeriod"]</strong></td>
+                    <td class="employer"><strong>@_localizer["WordEmployer"]</strong></td>
+                    <td class="tech"><strong>@_localizer["WordProjectsAndTech"]</strong></td>
+                </tr>
+
+                <partial name="/Views/Partial/CVSection.cshtml" model="@("ItSenteret")" />
+                <partial name="/Views/Partial/CVSection.cshtml" model="@("Mind")" />
+                <partial name="/Views/Partial/CVSection.cshtml" model="@("TjGroup")" />
+                <partial name="/Views/Partial/CVSection.cshtml" model="@("LundbeckConsulting")" />
+                <partial name="/Views/Partial/CVSection.cshtml" model="@("Teazer")" />
+                <partial name="/Views/Partial/CVSection.cshtml" model="@("Emode")" />
+                <partial name="/Views/Partial/CVSection.cshtml" model="@("Experian")" />
+                <partial name="/Views/Partial/CVSection.cshtml" model="@("BetOnBet")" />
+                <partial name="/Views/Partial/CVSection.cshtml" model="@("Compello")" />
+                <partial name="/Views/Partial/CVSection.cshtml" model="@("Elixia")" />
+            </table>
+        </p>
+    </section>
+    <section class="projects">
+        <h2>@_localizer["WordProjectsAndTech"]</h2>
+        <p>
+            <table class="content">
+                <tr>
+                    <td valign="top" class="name">Bare hyggelig</td>
+                    <td><a href="http://barehyggelig.com" target="_blank">http://barehyggelig.com</a></td>
+                </tr>
+                <tr>
+                    <td valign="top" class="name">Friends For Understanding</td>
+                    <td><a href="http://friendsforunderstanding.com" target="_blank">http://friendsforunderstanding.com</a></td>
+                </tr>
+                <tr>
+                    <td valign="top" class="name">Are Buraas</td>
+                    <td><a href="http://are1.no" target="_blank">http://are1.no</a></td>
+                </tr>
+                <tr>
+                    <td valign="top" class="name">En Allsidig Håndverker</td>
+                    <td><i>@_localizer["PhraseNotActive"]</i></td>
+                </tr>
+                <tr>
+                    <td valign="top" class="name">Hverdagsklubben</td>
+                    <td><i>@_localizer["PhraseNotActive"]</i></td>
+                </tr>
+                <tr>
+                    <td valign="top" class="name">Festen for Resten</td>
+                    <td><i>@_localizer["PhraseNotActive"]</i></td>
+                </tr>
+                <tr>
+                    <td valign="top" class="name">Vertshuset</td>
+                    <td><i>@_localizer["PhraseNotActive"]</i></td>
+                </tr>
+                <tr>
+                    <td valign="top" class="name">Line Eldor</td>
+                    <td><a href="http://lineeldor.no" target="_blank">http://lineeldor.no</a></td>
+                </tr>
+                <tr>
+                    <td valign="top" class="name">Creator framework</td>
+                    <td>@_localizer["ProjectCreator"]</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="name">LC Assets</td>
+                    <td>@_localizer["ProjectAssets"]</td>
+                </tr>
+                <tr>
+                    <td valign="top" class="name">GitHub</td>
+                    <td>@_localizer["ProjectGit"]</td>
+                </tr>
+            </table>
+        </p>
+    </section>
+</article>
+
+<div id="cvBackground"></div>

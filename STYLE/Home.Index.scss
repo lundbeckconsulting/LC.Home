@@ -1,0 +1,12 @@
+﻿@import "./Settings";
+@import "Creator/_Media";
+
+#contentSpacer {
+    height: 12px;
+}
+
+@include media(MD) {
+    #contentSpacer {
+        height: 82px;
+    }
+}

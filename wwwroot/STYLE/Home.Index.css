@@ -1,0 +1,6 @@
+﻿#contentSpacer {
+  height: 12px; }
+
+@media (min-width: 768px) {
+  #contentSpacer {
+    height: 82px; } }

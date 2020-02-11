@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\IMAGE\BACKGROUND\blue-shade.jpg\**" />
+    <Content Remove="wwwroot\IMAGE\BACKGROUND\blue-shade.jpg\**" />
+    <EmbeddedResource Remove="wwwroot\IMAGE\BACKGROUND\blue-shade.jpg\**" />
+    <None Remove="wwwroot\IMAGE\BACKGROUND\blue-shade.jpg\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="bundleconfig.json" />
+    <Content Remove="compilerconfig.json" />
+    <Content Remove="wwwroot\STYLE\Creator\Creator.css" />
+    <Content Remove="wwwroot\STYLE\Creator\Creator.min.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="STYLE\Settings.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bundleconfig.json" />
+    <None Include="compilerconfig.json" />
+    <None Include="wwwroot\STYLE\Creator\Creator.css" />
+    <None Include="wwwroot\STYLE\Creator\Creator.min.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="P:\LC TECH\DEV\Assets.Core\Assets.Core.csproj" />
+    <ProjectReference Include="P:\LC TECH\DEV\Assets\Assets.csproj" />
+    <ProjectReference Include="P:\LC TECH\DEV\Creator\Creator.csproj" />
+  </ItemGroup>
+
+
+
+</Project>

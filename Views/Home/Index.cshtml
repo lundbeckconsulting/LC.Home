@@ -1,46 +1,27 @@
-﻿@using LC.Home.Blitz.Data.Models;
-@using Microsoft.EntityFrameworkCore;
+﻿@using LC.Home.Chicken;
+@using LC.Home.Chicken.Models;
+@using Creator.TagHelpers.Models;
+@using System.Collections.ObjectModel;
 
 @{
-    ViewData["Title"] = _localizer["Title"];
+    ViewData["Title"] = _localizer["BrandSlogan"].Value;
 }
 
 @section STYLE {
-    <asset path="Index.css" />
-    <asset type="jQuery" />
-    <asset type="CreatorStyle" />
-    <asset type="GoogleAnalytics" />
+    <asset path="Home.Index.css" />
+    <asset path="Partial.Section.css" />
+    <asset path="Partial.CV.css" />
 }
 
-<div class="dis-table mrg-auto">
-    <div class="row">
-        <div class="col-md-5 show-md align-right">
-            <div class="device-tablet-screen">
-                <img src="/IMAGE/logo.png" class="logo r" alt="Logo" title="Logo" />
-            </div>
-        </div>
-        <div class="col-xs-12 col-md-7 align-center">
-            <h1 class="f-4 f-5-sm f-8-md ws-nowrap">@_sharedLocalizer["CoName"]</h1>
-            <h2 class="slogan">-@_sharedLocalizer["CoSlogan"]-</h2>
-            <h3 class="points">@_sharedLocalizer["WordDesign"]<span class="separator">|</span>@_sharedLocalizer["WordDevelopment"]<span class="separator">|</span>@_sharedLocalizer["WordHosting"]</h3>
-            <div class="flex-center-center links">
-                <a asp-action="OmLundbeckConsulting" class="h3 link ws-nowrap"><icon type="UserNinja" /> @_sharedLocalizer["PhraseAboutMe"]</a><span class="separator">|</span><a asp-action="MinModell" class="f-3 f-6-md f-7-lg link ws-nowrap"><icon type="Calendar" /> @_sharedLocalizer["WordModel"]</a><span class="separator">|</span><a asp-action="MineProsjekter" class="f-3 f-6-md f-7-lg link ws-nowrap"><icon type="Code" /> @_sharedLocalizer["WordProjects"]</a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container-auto event-wrap">
-    <h2 class="h3">@_sharedLocalizer["WordNews"]</h2>
-    <div class="items">
-        @foreach (HistoryItem item in await _data.Context.HistoryItems.Where(h => h.Active && h.Culture.Equals(_sitesRepo.CurrentCulture.Name)).OrderByDescending(k => k.DateCreated).ToListAsync())
-        {
-            <a href="@item.URL" target="_blank" class="item">
-                <div class="row">
-                    <div class="col-md-2"><strong>@item.DateCreated.ToString("dd.MM.yyyy")</strong></div>
-                    <div class="col-md-4">@item.Header</div>
-                    <div class="col-md-6">@Html.Raw(item.Description)</div>
-                </div>
-            </a>
-        }
-    </div>
-</div>
+@section SCRIPT {
+    <asset path="Home.Index.js" />
+    <asset path="Partial.Section.js" />
+}
+
+<div id="contentSpacer"></div>
+
+<partial name="/Views/Partial/Section.cshtml" model="new SectionModel(Sections.NewSite)" />
+<partial name="/Views/Partial/Section.cshtml" model="new SectionModel(Sections.OneManBand)" />
+<partial name="/Views/Partial/Section.cshtml" model="new SectionModel(Sections.Startup)" />
+
+<partial name="/Views/Partial/CV.cshtml" />
