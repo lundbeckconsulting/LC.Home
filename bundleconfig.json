@@ -1,0 +1,8 @@
+[
+  {
+    "inputFiles": [
+      "SCRIPT/Home.Index.js"
+    ],
+    "outputFileName": "wwwroot/SCRIPT/Home.Index.min.js"
+  }
+]

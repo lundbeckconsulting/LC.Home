@@ -7,10 +7,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lundbeck Consulting / @ViewData["Title"]</title>
+    <asset type="FavIcon" />
 
     <asset type="CreatorStyle" />
     <asset type="FontAwesomeScript" />
-    <asset type="GoogleFonts" fonts="Cuprum, Noto Sans" />
+    <asset type="GoogleFonts" fonts="Cuprum, Noto Sans" ignore-environment="true" />
     <asset path="Layout.css" />
 
     @await RenderSectionAsync("STYLE", false)
@@ -67,7 +68,7 @@
         </div>
     </footer>
 
-    <asset type="jQuery" />
+    <asset type="jQuery" ignore-environment="true" />
 
     @await RenderSectionAsync("SCRIPT", false)
 </body>

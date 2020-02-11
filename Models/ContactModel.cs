@@ -7,7 +7,7 @@ using LC.Assets.Components.Repos;
 using System;
 using System.Net;
 
-namespace LC.Home.Chicken.Models
+namespace LC.Home.Chips.Models
 {
     public interface IContactModel
     {

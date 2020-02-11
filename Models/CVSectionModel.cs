@@ -3,7 +3,7 @@
     @Author         : Stein Lundbeck
 */
 
-namespace LC.Home.Chicken.Models
+namespace LC.Home.Chips.Models
 {
     public interface ICVSectionModel
     {

@@ -13,6 +13,7 @@ body {
 
 #brandName {
     font-family: 'Cuprum', cursive;
+    font-weight: bold;
     font-size: 2.8rem;
     color: $mainColor;
     margin: 0;
@@ -164,6 +165,7 @@ footer {
     #headerSection {
         & .content {
             width: 76%;
+            background-size: 348px;
         }
     }
 

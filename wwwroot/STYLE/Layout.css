@@ -8,6 +8,7 @@
 
 #brandName {
   font-family: 'Cuprum', cursive;
+  font-weight: bold;
   font-size: 2.8rem;
   color: #000b16;
   margin: 0;
@@ -107,7 +108,8 @@ footer {
     background: url("/IMAGE/BACKGROUND/mountain-blue-shade.jpg") no-repeat center fixed;
     background-size: cover; }
   #headerSection .content {
-    width: 76%; }
+    width: 76%;
+    background-size: 348px; }
   #brandName {
     font-size: 4.8rem;
     top: 20px; }

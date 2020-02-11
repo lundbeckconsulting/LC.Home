@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using System.Globalization;
 using System.Threading.Tasks;
 
-namespace LC.Home.Chicken.Middle
+namespace LC.Home.Chips.Middle
 {
     public class SetCulture
     {

@@ -5,22 +5,18 @@
 
 using LC.Assets.Core.Components;
 using LC.Assets.Core.Components.Extensions;
-using LC.Home.Chicken.Middle;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace LC.Home.Chicken
+namespace LC.Home.Chips
 {
     public class Startup
     {
         public Startup(IConfiguration configuration)
         {
             this.Configuration = configuration;
-
-            this.Configuration.GetValue<string>("Chicken:Culture");
         }
 
         public void ConfigureServices(IServiceCollection services)
@@ -28,7 +24,6 @@ namespace LC.Home.Chicken
             services.Configure<IConfiguration>(this.Configuration);
             services.AddAssetsIdentity();
             services.AddAssetsRepos(new string[] { RepoServiceTypes.Identity });
-            services.AddAssetsHTTPS();
             services.AddAssets(end => {
                 end.EnableEndpointRouting = false;
             }, true);
@@ -36,14 +31,11 @@ namespace LC.Home.Chicken
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseRewriter(
-                new RewriteOptions()
-                .Add(new CultureRedirect()));
-
+            app.UseAssetsLocalizationLangQuery();
+            //app.UseAssetsHTTPS(this.Configuration);
+            app.UseHsts();
+            app.UseHttpsRedirection();
             app.UseAssetsDebug(env);
-            app.UseAssetsHTTPS();
-            app.UseAssetsLocalization();
-            app.UseMiddleware<SetCulture>();
             app.UseAssets(default, true);
         }
 

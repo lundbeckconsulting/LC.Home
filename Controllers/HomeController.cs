@@ -6,7 +6,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace LC.Home.Chicken.Controllers
+namespace LC.Home.Chips.Controllers
 {
     public class HomeController : Controller
     {

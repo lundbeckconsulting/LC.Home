@@ -3,7 +3,7 @@
     @Author         : Stein Lundbeck
 */
     
-namespace LC.Home.Chicken
+namespace LC.Home.Chips
 {
     public enum Sections
     {

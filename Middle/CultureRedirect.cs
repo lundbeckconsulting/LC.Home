@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Net.Http.Headers;
 using System.Net;
 
-namespace LC.Home.Chicken.Middle
+namespace LC.Home.Chips.Middle
 {
     public class CultureRedirect : IRule
     {
