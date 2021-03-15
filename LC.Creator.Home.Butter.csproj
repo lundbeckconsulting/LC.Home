@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\DEV\Assets.Core\Assets.Core.csproj" />
+    <ProjectReference Include="..\..\DEV\Creator.Components\Creator.Components.csproj" />
+  </ItemGroup>
+
+</Project>

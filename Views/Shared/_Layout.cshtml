@@ -1,75 +1,34 @@
-﻿@using Microsoft.Extensions.Configuration;
-
-<!DOCTYPE html>
-<html lang="@System.Threading.Thread.CurrentThread.CurrentCulture.Name" class="creator">
+﻿<!DOCTYPE html>
+<html lang="en" class="creator-xl">
 <head>
-    <asset type="GoogleAnalytics" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lundbeck Consulting / @ViewData["Title"]</title>
-    <asset type="FavIcon" />
+    <site:head files="Layout.css" />
 
-    <asset type="CreatorStyle" />
-    <asset type="FontAwesomeScript" />
-    <asset type="GoogleFonts" fonts="Cuprum, Noto Sans" ignore-environment="true" />
-    <asset path="Layout.css" />
-
-    @await RenderSectionAsync("STYLE", false)
+    @await RenderSectionAsync("STYLE", required: false) 
 </head>
-<body class="creator-no-pad-cover creator-md">
-    <div id="topSpacer"></div>
-    <header id="headerSection" class="creator">
-        <div class="flex-end">
-            <div class="content">
-                <div class="inner flex">
-                    <img id="brandLogo" src="/IMAGE/lc-logo.png" alt="lundbeck consulting logo" title="Lundbeck Consulting logo" />
-                    <div id="brandWrap" class="align-center">
-                        <h1 id="brandName">Lundbeck Consulting</h1>
-                        <span id="brandSlogan" class="block">@_localizer["BrandSlogan"]</span>
-                    </div>
-                </div>
-            </div>
+<body>
+    <header id="MainHead">
+        <div class="flex-start-center">
+            <img id="CreatorLogo" src="http://shared.lundbeckconsulting.com/IMAGE/creator-logo-md.png" alt="Creator logo" class="mrg-md" /> <span class="show-md" style="font-size: 18px;">Creator framework</span>
         </div>
-        <div class="flex-end">
-            <div id="topMenuWrap" class="flex-center">
-                <asset class="email" icon="EnvelopeFull" title="@_localizer["PhraseSendEmail"].Value" icon-text-hide="true" icon-format="Anchor" href="mailto:lc@lundbeckconsulting.no" />
-                <span class="separator">/</span>
-                <div class="flex-center-center lang-wrap">
-                    <a href="/?lang=nb-NO" class="lang norwegian"><img src="/IMAGE/flag-norwegian.png" class="flag" title="Norsk" alt="Norwegian flag" /></a>
-                    <a href="/?lang=en-US" class="lang english"><img src="/IMAGE/flag-english.png" class="flag" title="English" alt="English flag" /></a>
-                </div>
-            </div>
-        </div>
+        <hr />
+        <nav class="main flex">
+            <a asp-controller="Creator" asp-action="Index" class="link"><icon awesome="Home" size="SM" /> Home</a><span class="separator">|</span><a asp-controller="Doc" asp-action="Index" class="link"><icon awesome="Doc" size="SM" /> Doc's</a><span class="separator">|</span><a href="https://github.com/lundbeckconsulting/Creator" class="link" target="_blank"><icon awesome="GitHub" size="SM" /> Source</a>
+        </nav>
+        <hr />
     </header>
-    <main role="main" class="creator main">
+    <main role="main">
         @RenderBody()
     </main>
-
-    <hr class="footer-line" />
-    <footer class="creator align-center">
-        <div class="copy flex-center-center">
-            <span>&copy; 2020 / Lundbeck Consulting - </span>
-            <asset icon="BuildingFull" href="https://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=984193483" class="company-info-link" title="@_localizer["WordCompanyRegistrationNumberTitle"].Value" target="_blank" icon-text-hide="true" icon-format="Anchor" />
-        </div>
-        <div class="actions flex-center">
-            <asset class="email" icon="EnvelopeFull" title="@_localizer["PhraseSendEmail"].Value" icon-text-hide="true" icon-format="Anchor" href="mailto:lc@lundbeckconsulting.no" />
-            <span class="separator">/</span>
-            <div class="flex-center-center lang-wrap">
-                <a href="/?lang=nb-NO" class="lang norwegian"><img src="/IMAGE/flag-norwegian.png" class="flag" title="Norsk" alt="Norwegian flag" /></a>
-                <a href="/?lang=en-US" class="lang english"><img src="/IMAGE/flag-english.png" class="flag" title="English" alt="English flag" /></a>
-            </div>
-        </div>
-        <div class="social-links flex-center">
-            <asset icon="FacebookLogoSquare" title="Facebook" href="https://www.facebook.com/LundbeckConsulting" icon-format="Anchor" icon-text-hide="true" />
-            <span class="separator">|</span>
-            <asset icon="LinkedInLogoSquare" title="LinkedIn" href="https://www.linkedin.com/company/lundbeck-consulting" icon-format="Anchor" icon-text-hide="true" />
-            <span class="separator">|</span>
-            <asset icon="GitHub" title="GitHub" href="https://github.com/orgs/lundbeckconsulting" icon-format="Anchor" icon-text-hide="true" />
+    <br />
+    <br />
+    <footer>
+        <div>
+             &copy; 2021 - Creator
         </div>
     </footer>
 
-    <asset type="jQuery" ignore-environment="true" />
+    <site:footer />
 
-    @await RenderSectionAsync("SCRIPT", false)
+    @await RenderSectionAsync("SCRIPT", required: false)
 </body>
 </html>

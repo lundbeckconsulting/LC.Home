@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "DocFormControl.css",
+	"sources": [
+		"../../STYLE/DocFormControl.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,eAAe,CAAC;EACZ,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,cAAc;EACrC,kBAAkB,EAAE,IAAI,GAC3B"
+}

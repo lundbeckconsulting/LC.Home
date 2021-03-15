@@ -1,0 +1,71 @@
+﻿@using System.Collections.ObjectModel;
+
+<header>
+    Quickly set Margin or Padding with the keywords <code>mrg</code> or <code>pad</code>
+</header>
+<h4>Size</h4>
+<ul>
+    <li>xxs - 4px</li>
+    <li>xs - 10px</li>
+    <li>sm - 16px</li>
+    <li>md - 28px</li>
+    <li>lg - 34px</li>
+    <li>xl - 42px</li>
+    <li>xxl - 60px</li>
+</ul>
+<h4>Directions</h4>
+<ul>
+    <li>left</li>
+    <li>right</li>
+    <li>top</li>
+    <li>bottom</li>
+    <li>horizontal</li>
+    <li>vertical</li>
+</ul>
+<h3>Syntax</h3>
+<code>pad/mrg-[Size]-[Direction]</code>
+<br />
+<br />
+<code>mrg-sm-left</code>
+<br />
+<code>pad-md</code>
+<br />
+<code>pad-md-vertical</code>
+<h3>Example</h3>
+<div id="PadMargExampleWrap">
+    <div class="flex-start-center">
+        @{ 
+            ICollection<SelectListItem> types = new Collection<SelectListItem>();
+            types.Add(new SelectListItem("mrg", "mrg"));
+            types.Add(new SelectListItem("pad", "pad"));
+
+            ICollection<SelectListItem> sizes = new Collection<SelectListItem>();
+            sizes.Add(new SelectListItem("xxs", "xxs"));
+            sizes.Add(new SelectListItem("xs", "xs"));
+            sizes.Add(new SelectListItem("sm", "sm"));
+            sizes.Add(new SelectListItem("md", "md"));
+            sizes.Add(new SelectListItem("lg", "lg"));
+            sizes.Add(new SelectListItem("xl", "xl"));
+            sizes.Add(new SelectListItem("xxl", "xxl"));
+
+            ICollection<SelectListItem> dirs = new Collection<SelectListItem>();
+            dirs.Add(new SelectListItem("[none]", "[none]"));
+            dirs.Add(new SelectListItem("left", "left"));
+            dirs.Add(new SelectListItem("right", "right"));
+            dirs.Add(new SelectListItem("top", "top"));
+            dirs.Add(new SelectListItem("bottom", "bottom"));
+            dirs.Add(new SelectListItem("horizontal", "horizontal"));
+            dirs.Add(new SelectListItem("vertical", "vertical"));
+        }
+
+        <select id="PadMargType" asp-items="@types" onchange="setPadMargVisuals()" class="sel-notify"></select>-<select id="PadMargSize" asp-items="@sizes" onchange="setPadMargVisuals()" class="sel-notify"></select>-<select id="PadMargDir" asp-items="@dirs" onchange="setPadMargVisuals()" class="sel-notify"></select>
+    </div>
+    <div class="pad-md">
+        <code id="PadMargCode"></code>
+    </div>
+    <div class="mrg-lg" style="max-width:500px;border:2px solid black;">
+        <div id="PadMargDemo">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+    </div>
+</div>

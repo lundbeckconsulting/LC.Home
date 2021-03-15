@@ -1,0 +1,48 @@
+﻿@using LundbeckConsulting.Components.Extensions;
+
+<header>
+    Style form control's. Input's of type Radio and Checkbox are currently not styled, but will be in future release.
+</header>
+<h3>Prefix</h3>
+<ul>
+    <li>txt - Textbox</li>
+    <li>txt-area - Textarea</li>
+    <li>btn - Button</li>
+    <li>frm - Form Control</li>
+    <li>sel - Select</li>
+</ul>
+<h3>Example</h3>
+<div class="FormControlTxt">
+    @{
+        string[] colors = new string[]
+        {
+                "default",
+                "primary",
+                "success",
+                "danger",
+                "warning",
+                "info",
+                "light",
+                "dark",
+                "antan",
+                "notify",
+                "funk"
+            };
+    }
+
+    @foreach (string clr in colors)
+    {
+        <div>
+            <h4>@clr.ToTitleCase()</h4>
+            <input type="text" class="txt-@clr" />
+            <br />
+            <input type="button" class="btn-@clr" value="The Button" />
+            <br />
+            <select class="sel-@clr">
+                <option>One</option>
+                <option>Two</option>
+                <option>Three</option>
+            </select>
+        </div>
+    }
+</div>

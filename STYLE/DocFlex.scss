@@ -1,0 +1,27 @@
+﻿#VisualsWrap {
+    border: 2px solid black;
+    border-radius: 6px;
+    max-width: 480px;
+    height: 300px;
+
+    & > .item {
+        height: 56px;
+        width: 56px;
+
+        &.one {
+            background-color: #ff0000;
+        }
+
+        &.two {
+            background-color: #b6ff00;
+        }
+
+        &.three {
+            background-color: #084b6d;
+        }
+
+        &.four {
+            background-color: #ff6a00;
+        }
+    }
+}

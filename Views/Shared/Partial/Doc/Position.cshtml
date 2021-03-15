@@ -1,0 +1,80 @@
+﻿@using System.Collections.ObjectModel;
+
+@{
+    string[] pos = new string[]
+    {
+        "absolute",
+        "fixed",
+        "relative",
+        "sticky"
+    };
+
+    string[] plc = new string[] 
+    { 
+        "left",
+        "right",
+        "top",
+        "bottom"
+    };
+}
+
+<header>
+    Allows you to position an element with one class prefixed with <code>pos</code>.
+</header>
+<h3>Syntax</h3>
+<code>pos-[Position]-[Direction]</code>
+<h4>Values</h4>
+<div class="row mrg-auto" style="max-width: 544px;">
+    <div class="col-xs-6">
+        <div>
+            <strong>Position</strong>
+        </div>
+        <ul>
+            @foreach (string str in pos)
+            {
+                <li>@str</li>
+            }
+        </ul>
+    </div>
+    <div class="col-xs-6">
+        <div>
+            <strong>Direction</strong>
+        </div>
+        <ul>
+            @foreach (string str in plc)
+            {
+                <li>@str</li>
+            }
+        </ul>
+    </div>
+</div>
+<h3>Example</h3>
+<code>pos-absolute-left</code>
+<br />
+<code>pos-relative</code>
+<div id="PosDemoWrap" class="pad-lg">
+    <div class="flex-start-center">
+        <code>pos-</code>
+
+        @{ 
+            ICollection<SelectListItem> posItems = new Collection<SelectListItem>();
+
+            foreach(string str in pos)
+            {
+                posItems.Add(new SelectListItem(str, str));
+            }
+
+            ICollection<SelectListItem> plcItems = new Collection<SelectListItem>();
+
+            foreach (string str in plc)
+            {
+                plcItems.Add(new SelectListItem(str, str));
+            }
+        }
+
+        <select id="PosSelect" asp-items="@posItems" class="sel-notify" onchange="setPosVisuals()"></select>-<select id="PlcSelect" asp-items="@plcItems" class="sel-notify" onchange="setPosVisuals()"></select>
+    </div>
+    <div class="demo-container">
+        <div class="item"></div>
+    </div>
+</div>

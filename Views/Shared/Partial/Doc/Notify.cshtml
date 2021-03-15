@@ -1,0 +1,49 @@
+﻿<header>
+    Display a notify bar or box.
+</header>
+<h3>Syntax</h3>
+The prefix is <code>notify</code> and you define bar or box, location and seconds to display.
+<br />
+<br />
+<code>notify-[Type]-[Placement]-[Interval]</code>
+
+<h4>Types</h4>
+<ul>
+    <li>Bar</li>
+    <li>Box</li>
+</ul>
+
+<h4>Interval</h4>
+<ul>
+    <li>3 seconds</li>
+    <li>5 seconds</li>
+    <li>8 seconds</li>
+    <li>14 seconds</li>
+    <li>20 seconds</li>
+    <li>permanent</li>
+</ul>
+
+<h4>Placement</h4>
+<ul>
+    <li>Top</li>
+    <li>Bottom</li>
+    <li>Left</li>
+    <li>Right</li>
+</ul>
+
+<h3>Example</h3>
+<div class="pad-lg">
+    <code>notify-bar-bottom-fourteen</code>
+</div>
+<script type="text/javascript">
+    function showNotify() {
+        document.getElementById("NotifyBar").dispatchEvent(new Event("cmd:open"));
+    }
+</script>
+
+<div class="pad-lg">
+    <button class="btn-success" onclick="showNotify()">Show notify bar</button>
+</div>
+<div id="NotifyBar" class="notify-bar-bottom-fourteen cp-success">
+    <h5>Now you see me</h5>
+</div>

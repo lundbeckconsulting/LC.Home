@@ -1,0 +1,72 @@
+﻿@import "Creator//_Media";
+
+.slogan-wrap {
+    grid-column: 1/-1;
+    margin: 22px;
+
+    & > h3 {
+        color: #144419;
+        font-size: 16px;
+    }
+}
+
+.illu-wrap {
+    grid-column: 1/-1;
+}
+
+section.info-wrap {
+    border: 6px solid #ff6a00;
+    border-radius: 14px;
+    padding: 12px;
+    box-shadow: 6px 6px 6px black;
+
+    &.code {
+        background-color: #9fe1c5;
+
+        & .feat-list {
+            font-size: 12px;
+        }
+    }
+
+    &.devices {
+        background-color: #77addc;
+
+        & .worry {
+            font-size: 16px;
+        }
+    }
+}
+
+.goto-code-wrap {
+    grid-column: 1/-1;
+    padding: 32px;
+
+    & > a {
+        color: black;
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: bold;
+    }
+}
+
+@include media() {
+    .slogan-wrap {
+        & > h3 {
+            font-size: 36px;
+        }
+    }
+
+    section.info-wrap {
+        &.code {
+            & .feat-list {
+                font-size: 18px;
+            }
+        }
+
+        &.devices {
+            & .worry {
+                font-size: 26px;
+            }
+        }
+    }
+}

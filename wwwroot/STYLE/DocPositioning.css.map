@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "DocPositioning.css",
+	"sources": [
+		"../../STYLE/DocPositioning.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AACI,YADQ,GACJ,eAAe,CAAC;EAChB,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,eAAe;EACvB,aAAa,EAAE,GAAG;EAClB,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK,GAQhB;EAdL,AAQQ,YARI,GACJ,eAAe,GAOX,KAAK,CAAC;IACN,SAAS,EAAE,IAAI;IACf,UAAU,EAAE,IAAI;IAChB,gBAAgB,EAAE,GAAG;IACrB,aAAa,EAAE,GAAG,GACrB"
+}

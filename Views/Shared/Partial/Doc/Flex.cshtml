@@ -1,0 +1,81 @@
+﻿@using System.Collections.ObjectModel;
+
+<header>
+    Quickly apply flex with different settings. Applied to a <code>div</code> it becomes a flex container and you can set <code>justify-content</code> and <code>align-items</code>.
+</header>
+<h3>Syntax</h3>
+<code>flex-[justify]-[align]</code>
+
+@{ 
+    string[] just = new string[]
+    {
+        "center",
+        "start",
+        "end",
+        "stretch",
+        "between",
+        "evenly"
+    };
+
+    string[] algn = new string[]
+    { 
+        "base",
+        "center",
+        "start",
+        "end",
+        "stretch"
+    };
+}
+
+<section class="align-wrap pad-xl mrg-auto" style="max-width:680px;">
+    <div class="row">
+        <div class="col-xs-6">
+            <strong>Justify-Content</strong>
+            <ul>
+                @foreach (string str in just) 
+                { 
+                    <li>@str</li>
+                }
+            </ul>
+        </div>
+        <div class="col-xs-6">
+            <strong>Align-Items</strong>
+            <ul>
+                @foreach (string str in algn)
+                {
+                    <li>@str</li>
+                }
+            </ul>
+        </div>
+    </div>
+</section>
+<h3>Example</h3>
+<section id="ExampleWrap">
+    <div class="flex-start-center">
+        @{ 
+            ICollection<SelectListItem> justSel = new Collection<SelectListItem>();
+            ICollection<SelectListItem> algnSel = new Collection<SelectListItem>();
+
+            foreach (string str in just)
+            {
+                justSel.Add(new SelectListItem(str, str));
+            }
+
+            foreach (string str in algn)
+            {
+                algnSel.Add(new SelectListItem(str, str));
+            }
+        }
+
+        Justify: <select id="SelectJustify" asp-items="@justSel" class="sel-success mrg-md-right" onchange="setVisuals()"></select> Align: <select id="SelectAlign" asp-items="@algnSel" class="sel-success" onchange="setVisuals()"></select>
+    </div>
+    <div class="pad-md">
+        <code id="VisualsCode"></code>
+    </div>
+    <div id="VisualsWrap">
+        <div class="item one"></div>
+        <div class="item two"></div>
+        <div class="item three"></div>
+        <div class="item four"></div>
+    </div>
+</section>

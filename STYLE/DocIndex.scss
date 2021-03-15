@@ -1,0 +1,65 @@
+﻿#BarsMenuWrap {
+    position: absolute;
+    right: 16px;
+    top: 72px;
+
+    & > .bars-icon {
+        color: #001d01;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+#BarsMenuBackground {
+    background-color: rgba(#001d01, 0.9);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 20px;
+
+    & .header {
+        color: #4cff00;
+    }
+
+    & a.link {
+        color: #4cff00;
+    }
+}
+
+#CloseBarsMenuIcon {
+    color: #4cff00;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}
+
+header.head-wrap {
+    grid-column: 1/-1;
+    color: #207e4a;
+}
+
+.main-wrap {
+    color: #053515;
+    grid-column: 1/-1;
+
+    & a {
+        font-size: 12px;
+        color: #053515;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    & .item-header {
+        font-size: 16px;
+        font-weight: bold;
+    }
+}

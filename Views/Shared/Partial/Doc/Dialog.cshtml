@@ -1,0 +1,55 @@
+﻿<header>
+    Displays a dialog using the <code>dialog</code> control and you can set the color and size.
+</header>
+<h3>Size</h3>
+<ul>
+    <li>xs - 200px</li>
+    <li>sm - 384px</li>
+    <li>md - 622px</li>
+    <li>lg - 840px</li>
+    <li>xl - 1024px</li>
+</ul>
+<br />
+<xmp><dialog class="dialog-antan-lg"></dialog></xmp>
+<h3>JavaScript</h3>
+<div>
+    The dialog's support the following events:
+    <ul>
+        <li>cmd:show</li>
+        <li>cmd:close</li>
+    </ul>
+</div>
+<h3>Example</h3>
+<button class="open-dialog" data-dialog="TheMainDialog">Open Dialog</button>
+
+<xmp>
+<dialog id="TheDialog" class="dialog-funk-lg">
+    <content>
+        <header>
+            <span>Great Dialog</span>
+            <i class="close-command"></i>
+        </header>
+        <div class="body">
+            My Dialog
+        </div>
+        <footer>
+            <input type="button" class="ok-command" value="Ok" />
+        </footer>
+    </content>
+</dialog>
+</xmp>
+
+<dialog id="TheMainDialog" class="dialog-funk-lg">
+    <content>
+        <header>
+            <span>Great Dialog</span>
+            <i class="close-command"></i>
+        </header>
+        <div class="body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <footer>
+            <input type="button" class="ok-command btn-success" value="Ok" />
+        </footer>
+    </content>
+</dialog>

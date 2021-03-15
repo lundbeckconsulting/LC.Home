@@ -1,12 +1,13 @@
-/*
-    @Date			: 29.01.2020
-    @Author         : Stein Lundbeck
-*/
-
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace LC.Home.Chips
+namespace LC.Creator.Home.Butter
 {
     public class Program
     {

@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "DocPositioning.min.css",
+	"sources": [
+		"../../../../../stdin"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,YAAY,CAAG,eAAe,AAAC,CAC7B,QAAQ,CAAE,QAAQ,CAClB,MAAM,CAAE,eAAe,CACvB,aAAa,CAAE,GAAG,CAClB,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CAAG,AAChB,AAAA,YAAY,CAAG,eAAe,CAAG,KAAK,AAAC,CACrC,SAAS,CAAE,IAAI,CACf,UAAU,CAAE,IAAI,CAChB,gBAAgB,CAAE,GAAG,CACrB,aAAa,CAAE,GAAG,CAAG"
+}

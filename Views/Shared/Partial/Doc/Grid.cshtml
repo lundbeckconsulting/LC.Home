@@ -1,0 +1,51 @@
+﻿@using System.Collections.ObjectModel;
+
+<header>
+    Create's a grid that automatically fits or fills the element.
+</header>
+<h4>Size</h4>
+<ul>
+    <li>xs - 8px</li>
+    <li>sm - 60px</li>
+    <li>md - 144px</li>
+    <li>lg - 366x</li>
+    <li>xl - 536px</li>
+    <li>xxl - 768px</li>
+</ul>
+<h3>Syntax</h3>
+<code>grid-[size]-[fill/fit]</code>
+<h3>Example</h3>
+<div class="pad-lg">
+    <div class="flex-start-center">
+        @{ 
+            ICollection<SelectListItem> sizes = new Collection<SelectListItem>();
+            sizes.Add(new SelectListItem("xs", "xs"));
+            sizes.Add(new SelectListItem("sm", "sm"));
+            sizes.Add(new SelectListItem("md", "md"));
+            sizes.Add(new SelectListItem("lg", "lg"));
+            sizes.Add(new SelectListItem("xl", "xl"));
+            sizes.Add(new SelectListItem("xxl", "xxl"));
+
+            ICollection<SelectListItem> types = new Collection<SelectListItem>();
+            types.Add(new SelectListItem("fill", "fill"));
+            types.Add(new SelectListItem("fit", "fit"));
+        }
+
+        <code>grid-</code><select id="GridSize" class="sel-notify" onchange="setGridVisuals()" asp-items="@sizes"></select>-<select id="GridType" class="sel-notify" onchange="setGridVisuals()" asp-items="@types"></select>
+    </div>
+    <br />
+    <code id="GridCode"></code>
+    <div class="pad-xl">
+        <div id="GridExample">
+            <div style="background-color:#ffd800;width:100%;">
+                One
+            </div>
+            <div style="background-color:#ff6a00;width:100%;">
+                Two
+            </div>
+            <div style="background-color:#4cff00;width:100%;">
+                Three
+            </div>
+        </div>
+    </div>
+</div>

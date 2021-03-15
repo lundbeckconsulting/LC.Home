@@ -1,0 +1,256 @@
+﻿<site:view id="15" files="DocIndex.css, DocIndex.js, ColorProfile.css, DocFlex.css, DocFlex.js, DocPositioning.css, DocPositioning.js, DocPaddingMargin.js, DocGrid.js, DocFormControl.css" />
+
+@using LC.Creator.Home.Butter.Models;
+@using LundbeckConsulting.Components.Extensions;
+
+@model IDocShow
+
+<nav id="BarsMenuWrap" class="hide-md">
+    <icon awesome="Bars" class="bars-icon" size="MD" />
+</nav>
+
+<header class="head-wrap flex">
+    <icon awesome="Doc" size="LG" /><h1 class="mrg-md-left">Creator Doc's</h1>
+</header>
+<div class="main-wrap row">
+    <section class="menu-wrap col-md-3">
+        <ul class="show-md">
+            @{
+                IDictionary<string, string> ff = new Dictionary<string, string>();
+                ff.Add("base", "Layout");
+                ff.Add("section", "include");
+            }
+            <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@ff" class="link">Include on site</a></li>
+            <li class="item-header">Layout</li>
+            <li>
+                <ul>
+                    @{
+                        IDictionary<string, string> colorData = new Dictionary<string, string>();
+                        colorData.Add("base", "Layout");
+                        colorData.Add("section", "color");
+
+                        IDictionary<string, string> documentData = new Dictionary<string, string>();
+                        documentData.Add("base", "Layout");
+                        documentData.Add("section", "document");
+
+                        IDictionary<string, string> flexData = new Dictionary<string, string>();
+                        flexData.Add("base", "Layout");
+                        flexData.Add("section", "flex");
+
+                        IDictionary<string, string> gridData = new Dictionary<string, string>();
+                        gridData.Add("base", "Layout");
+                        gridData.Add("section", "grid");
+
+                        IDictionary<string, string> mediaData = new Dictionary<string, string>();
+                        mediaData.Add("base", "Layout");
+                        mediaData.Add("section", "media");
+
+                        IDictionary<string, string> padMargData = new Dictionary<string, string>();
+                        padMargData.Add("base", "Layout");
+                        padMargData.Add("section", "paddingmargin");
+
+                        IDictionary<string, string> positionData = new Dictionary<string, string>();
+                        positionData.Add("base", "Layout");
+                        positionData.Add("section", "position");
+
+                        IDictionary<string, string> rowData = new Dictionary<string, string>();
+                        rowData.Add("base", "Layout");
+                        rowData.Add("section", "row");
+
+                        IDictionary<string, string> typoData = new Dictionary<string, string>();
+                        typoData.Add("base", "Layout");
+                        typoData.Add("section", "typography");
+                    }
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@colorData" class="link">Color Profile</a></li>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@documentData" class="link">Document</a></li>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@flexData" class="link">Flex</a></li>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@gridData" class="link">Grid</a></li>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@mediaData" class="link">Media</a></li>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@padMargData" class="link">Padding and Margin</a></li>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@positionData" class="link">Positioning</a></li>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@rowData" class="link">Row</a></li>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@typoData" class="link">Typography</a></li>
+                </ul>
+            </li>
+            <li class="item-header">Element</li>
+            <li>
+                <ul>
+                    @{ 
+                        IDictionary<string, string> dialogData = new Dictionary<string, string>();
+                        dialogData.Add("base", "Element");
+                        dialogData.Add("section", "dialog");
+
+                        IDictionary<string, string> formData = new Dictionary<string, string>();
+                        formData.Add("base", "Element");
+                        formData.Add("section", "formcontrol");
+
+                        IDictionary<string, string> notifyData = new Dictionary<string, string>();
+                        notifyData.Add("base", "Element");
+                        notifyData.Add("section", "notify");
+                    }
+
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@dialogData" class="link">Dialog</a></li>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@formData" class="link">Form Control</a></li>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@notifyData" class="link">Notify</a></li>
+                </ul>
+            </li>
+
+            @{ 
+                IDictionary<string, string> otherData = new Dictionary<string, string>();
+                otherData.Add("base", "System");
+                otherData.Add("section", "other");
+            }
+
+            <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@otherData" class="link">Other</a></li>
+        </ul>
+    </section>
+    <section class="content-wrap col-xs-12 col-md-9">
+        @if (Model.Section.Null())
+        {
+        <div id="SectionsLinksWrap" class="flex mrg-auto" style="max-width:640px;">
+            <div>
+                <h3 class="layout section-header">Layout</h3>
+                <div class="items-wrap">
+                    <ul>
+                        <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@colorData" class="link">Color Profile</a></li>
+                        <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@documentData" class="link">Document</a></li>
+                        <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@flexData" class="link">Flex</a></li>
+                        <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@gridData" class="link">Grid</a></li>
+                        <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@mediaData" class="link">Media</a></li>
+                        <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@padMargData" class="link">Padding and Margin</a></li>
+                        <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@positionData" class="link">Positioning</a></li>
+                        <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@rowData" class="link">Row</a></li>
+                        <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@typoData" class="link">Typography</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3 class="element section-header">Element</h3>
+                <div class="items-wrap">
+                    <ul>
+                        <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@dialogData" class="link">Dialog</a></li>
+                        <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@formData" class="link">Form Control</a></li>
+                        <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@notifyData" class="link">Notify</a></li>
+                        <li>&nbsp;</li>
+                        <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@otherData" class="link">Other</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        }
+        else
+        {
+            <h1 class="path"><span class="base">@Model.Base</span> <span class="separator">></span> <span class="section">@Model.Name</span></h1>
+
+            switch(Model.Base)
+            {
+                case "Layout":
+                    switch (Model.Section)
+                    {
+                        case "include":
+                            await Html.RenderPartialAsync("/Views/Shared/Partial/Doc/Include.cshtml");
+                            break;
+
+                        case "color":
+                            await Html.RenderPartialAsync("/Views/Shared/Partial/Doc/ColorProfile.cshtml");
+                            break;
+
+                        case "document":
+                            await Html.RenderPartialAsync("/Views/Shared/Partial/Doc/Document.cshtml");
+                            break;
+
+                        case "flex":
+                            await Html.RenderPartialAsync("/Views/Shared/Partial/Doc/Flex.cshtml");
+                            break;
+
+                        case "grid":
+                            await Html.RenderPartialAsync("/Views/Shared/Partial/Doc/Grid.cshtml");
+                            break;
+
+                        case "media":
+                            await Html.RenderPartialAsync("/Views/Shared/Partial/Doc/Media.cshtml");
+                            break;
+
+                        case "paddingmargin":
+                            await Html.RenderPartialAsync("/Views/Shared/Partial/Doc/PaddingMargin.cshtml");
+                            break;
+
+                        case "position":
+                            await Html.RenderPartialAsync("/Views/Shared/Partial/Doc/Position.cshtml");
+                            break;
+
+                        case "row":
+                            await Html.RenderPartialAsync("/Views/Shared/Partial/Doc/Row.cshtml");
+                            break;
+
+                        case "typography":
+                            await Html.RenderPartialAsync("/Views/Shared/Partial/Doc/Typography.cshtml");
+                            break;
+                    }
+                    break;
+
+                case "Element":
+                    switch(Model.Section)
+                    {
+                        case "dialog":
+                            await Html.RenderPartialAsync("/Views/Shared/Partial/Doc/Dialog.cshtml");
+                            break;
+
+                        case "formcontrol":
+                            await Html.RenderPartialAsync("/Views/Shared/Partial/Doc/FormControl.cshtml");
+                            break;
+
+                        case "notify":
+                            await Html.RenderPartialAsync("/Views/Shared/Partial/Doc/Notify.cshtml");
+                            break;
+                    }
+                    break;
+
+                case "System":
+                    switch (Model.Section)
+                    {
+                        case "other":
+                            await Html.RenderPartialAsync("/Views/Shared/Partial/Doc/Other.cshtml");
+                            break;
+                    }
+                    break;
+            }
+        }
+    </section>
+</div>
+
+<div id="BarsMenuBackground" class="hide">
+    <div class="flex-end">
+        <icon awesome="Close" size="MD" id="CloseBarsMenuIcon" />
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <h5 class="header">Layout</h5>
+            <div>
+                <ul>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@colorData" class="link">Color Profile</a></li>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@documentData" class="link">Document</a></li>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@flexData" class="link">Flex</a></li>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@gridData" class="link">Grid</a></li>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@mediaData" class="link">Media</a></li>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@padMargData" class="link">Padding and Margin</a></li>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@positionData" class="link">Positioning</a></li>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@rowData" class="link">Row</a></li>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@typoData" class="link">Typography</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <h5 class="header">Element</h5>
+            <div>
+                <ul>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@dialogData" class="link">Dialog</a></li>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@formData" class="link">Form Control</a></li>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@notifyData" class="link">Notify</a></li>
+                    <li>&nbsp;</li>
+                    <li><a asp-controller="Doc" asp-action="Index" asp-all-route-data="@otherData" class="link">Other</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

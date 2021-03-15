@@ -1,0 +1,13 @@
+#PosDemoWrap > .demo-container {
+		position: relative;
+		border: 2px solid black;
+		border-radius: 6px;
+		width: 400px;
+		height: 300px; }
+		#PosDemoWrap > .demo-container > .item {
+				min-width: 44px;
+				min-height: 44px;
+				background-color: red;
+				border-radius: 6px; }
+
+/*# sourceMappingURL=DocPositioning.css.map */
